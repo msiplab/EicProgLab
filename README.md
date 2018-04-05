@@ -6,7 +6,7 @@
 
     $ git clone https://github.com/msiplab/EicProgLab.git EicProgLab
 
-# Geany
+# Geanyで編集
 
 - 文書　＞　読み取り専用　＞　解除
 
