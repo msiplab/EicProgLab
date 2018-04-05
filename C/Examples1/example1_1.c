@@ -3,12 +3,12 @@
  *
  * プログラミング演習 例題1-1
  *
- * Copyright (C) 2007-2017, S. Muramatsu
+ * Copyright (C) 2007-2018, S. Muramatsu
  *
  */
 #include <stdio.h>
 
-main()
+int main()
 {
 	/* 変数宣言 */
 	double x; /* 独立変数 */

@@ -3,7 +3,7 @@
  *
  * プログラミング演習 例題1-2
  *
- * Copyright (C) 2010-2017, S. Muramatsu
+ * Copyright (C) 2010-2018, S. Muramatsu
  *
  */
 #include <stdio.h>
@@ -33,14 +33,14 @@ double mysqrt(double a) {
 }
 
 /* メイン関数 */
-main()
+int main()
 {
 	/* 変数宣言 */
 	double a; /* 入力値 */
 	double x; /* 平方根 */
 
 	/* 平方根を求める値の読み込み */
-	printf("正の実数値を入力して下さい: ",a);
+	printf("正の実数値を入力して下さい: ");
 	scanf("%lf",&a);
 
 	/* 入力データの確認 */
