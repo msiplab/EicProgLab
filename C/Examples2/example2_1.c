@@ -12,7 +12,7 @@
 
 double getNorm(double* pVector, int nElements); /* 関数プロトタイプ */
 
-main()
+int main()
 {
 
   /* 変数宣言 */

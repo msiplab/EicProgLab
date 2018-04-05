@@ -11,9 +11,9 @@
 
 /* 補足プログラム（解析解による計算の）実行例
  *
- * Z:\work>gcc appendix2_2.c -o appendix2_2 -lm
+ * $ gcc appendix2_2.c -o appendix2_2 -lm
  *
- * Z:\work>appendix2_2 rlcsetup.csv rlcresulthosoku.csv
+ * $ ./appendix2_2 rlcsetup.csv rlcresulthosoku.csv
  * E = 1 [V], R = 1000 [Ohm], L = 0.01 [H], C = 1e-007 [F]
  * t0 = 0 [s], te = 0.001 [s], v = 0 [V], dv/dt = 0, h = 0.01
  * zeta = 1.58114
