@@ -4,7 +4,7 @@
 
 void display(double[]);
 
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   double z[2];
   z[0] = atof(argv[1]);

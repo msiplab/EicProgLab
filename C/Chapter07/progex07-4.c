@@ -10,7 +10,7 @@ typedef struct {
 void display(Complex);
 Complex prodOf(Complex,Complex);
 
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   Complex z0 = { atof(argv[1]), atof(argv[2]) };
   Complex z1 = { atof(argv[3]), atof(argv[4]) };

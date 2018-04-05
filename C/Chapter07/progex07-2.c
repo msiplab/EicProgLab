@@ -7,7 +7,7 @@ typedef struct {
   double imag;
 } Complex;
 
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   Complex z;
   char s;

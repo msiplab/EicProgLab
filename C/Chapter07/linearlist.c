@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /* 要素データの構造定義 */
 struct element {
@@ -20,7 +21,7 @@ void addElement(List*, double);
 void removeElement(List*, int);
 void insertElement(List*, int, double);
 
-main() {
+int main() {
   /* リスト型の宣言 */
   List v;
   

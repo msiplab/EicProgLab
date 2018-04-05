@@ -9,7 +9,7 @@ typedef struct {
 
 void display(Complex);
 
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   Complex z;
 

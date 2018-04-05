@@ -5,7 +5,7 @@ typedef union {
   int i;
 } Number;
 
-main()
+int main()
 {
   Number n;
 
