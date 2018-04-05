@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
   float a = 0.10f; /* (1.1001100110011001100110 x 2^(-4))_2 */
   float b = 10.0f;  

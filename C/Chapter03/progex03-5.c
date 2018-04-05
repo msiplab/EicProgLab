@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
   int n = 4;
   int d = 2;

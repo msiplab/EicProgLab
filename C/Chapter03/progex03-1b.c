@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-main()
+int main()
 {
   int i;
   int n;        /* 数列の要素数 */
@@ -10,11 +10,11 @@ main()
   double mean = 0.0; /* 平均 */
   double var  = 0.0; /* 分散 */
   
-  printf("要素数を入力して下さい: ", n);
+  printf("要素数を入力して下さい: ");
   scanf("%d",&n);
   a = (double*)malloc(sizeof(double)*n);
 
-  printf("数値を入力して下さい\n", n);
+  printf("数値を入力して下さい\n");
   for (i=0; i<n; i++) {
     printf("a[%2d] : ", i);
     scanf("%s",str);

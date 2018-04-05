@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
   float a = 6144.006835937500f;
   float b = 6144.005859375000f;
