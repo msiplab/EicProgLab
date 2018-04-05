@@ -1,7 +1,10 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
+/*
+ * 端末上でコマンド引数を渡しながら実行
+ */
 
-main(int argc,char *argv[])
+int main(int argc,char *argv[])
 {
   /* 変数宣言 */
   FILE *pfin, *pfout;

@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+/*
+ * コンパイルは端末上で
+ * 
+ * $ gcc -Wall progex06-4.c -lm -o progex06-4
+ * 
+ */
 
 #define EPS 1.0e-15  /* 収束判定値 */
 #define MAX_ITER 100 /* 最大反復回数 */ 
@@ -8,7 +14,7 @@
 double f(double);  /* 関数 */
 double df(double); /* 導関数 */
 
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   double xpre;  /* 更新前の値 */
   double xnxt = atof(argv[1]); /* 更新後の値（初期化）*/

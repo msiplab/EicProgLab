@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-main(int argc,char *argv[])
+int main(int argc,char *argv[])
 {
   /* 変数宣言 */
   double matrix[2][2];

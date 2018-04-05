@@ -4,7 +4,7 @@
 void rceuler(double*,double*,double);
 double f(double);
 
-main()
+int main()
 {
   /* 変数宣言と設定 */
   double e = 1.0;       /*　E= 1.0[V] */

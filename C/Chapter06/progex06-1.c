@@ -4,8 +4,7 @@
 void display( double[][NCOLS] , int);
 double getElement( double[][NCOLS] , int, int);
 
-
-main()
+int main()
 {
   double matrix[][NCOLS] = {{1.0, 2.0},
 			    {3.0, 4.0}};

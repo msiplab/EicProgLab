@@ -1,17 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+/*
+ * 端末上でコマンド引数を渡して実行
+ */
 
 void display(double[], int);
 double sqrdnorm(double*, int);
 
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   double vector[] 
 	= { atof(argv[1]), atof(argv[2]) };
   int nElements = 2;
 
   display(vector, nElements);
-  printf("\t norm^2 = %f", 
+  printf("\t norm^2 = %f\n", 
 	sqrdnorm(&vector[0], nElements));
 }
 
