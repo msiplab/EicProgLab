@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
   double factorial0, factorial1, factorial2;
   int i, n, k;

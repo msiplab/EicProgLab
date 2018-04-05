@@ -3,7 +3,7 @@
 #define DELTA 1E-15 /* 誤差の上限 */
 #define absdif(x,y) ((x>y) ? (x-y) : (y-x)) /* 差分絶対値 */
 
-main()
+int main()
 {
 	/* 変数宣言 */
 	double a; /* 平方根を求める値 */

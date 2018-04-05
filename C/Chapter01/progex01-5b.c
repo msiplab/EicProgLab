@@ -8,7 +8,7 @@ double factorial(int k) {
 	return y;
 }
 
-main()
+int main()
 {
   int n, k;
 

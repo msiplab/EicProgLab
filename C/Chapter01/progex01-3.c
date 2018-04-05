@@ -1,7 +1,7 @@
 /* 3つの入力データの最大値 */
 #include <stdio.h>
 
-main()
+int main()
 {
   int a, b, c, max;
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define SQRT_OF_3 1.73205080756888 /* ルート３のマクロ定義 */
 
-main() 
+int main() 
 {
   /* 変数宣言 */
   double length; /* 一辺の長さ */
@@ -16,4 +16,5 @@ main()
   /* 正三角形の面積の表示 */
   printf("一辺の長さが %f の正三角形の面積\n   = %f\n",
 	 length, area);
+
 }
