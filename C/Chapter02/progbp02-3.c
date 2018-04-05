@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
   int i= 2000000000;
   signed int si = 2000000000;

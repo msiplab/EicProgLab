@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define BIG 2000000000
 
-main()
+int main()
 {
     int a, b=BIG, c=BIG;
 

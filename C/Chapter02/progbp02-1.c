@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
   char c='\xFF'; /* 11111111 */
   signed char sc='\xFF'; /* 11111111 */

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
   char c = 9; /* 水平タブ */
   printf("%c a %c b \n", c, c+1);
