@@ -3,7 +3,7 @@
 void call_by_value(int); /* 関数プロトタイプ */
 void call_by_reference(int*);
 
-main()
+int main()
 {
     int a=1;
  

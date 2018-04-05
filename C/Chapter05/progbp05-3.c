@@ -2,7 +2,7 @@
 /* 関数プロトタイプ */
 void sumValue(int a, int b, int sum); 
 
-main() {
+int main() {
   int a = 1;
   int b = 2;
   int sum = 0;

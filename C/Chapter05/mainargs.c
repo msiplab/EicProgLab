@@ -1,6 +1,7 @@
 #include <stdio.h>
+/* 端末上でコマンド引数を渡して実行 */
 
-main( int argc, char *argv[] ) {
+int main( int argc, char *argv[] ) {
   
   int i;
 

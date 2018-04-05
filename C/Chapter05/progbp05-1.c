@@ -3,7 +3,7 @@ void sub(void); /* 関数プロトタイプ */
 
 int a = 1;
 
-main()
+int main()
 {
     int  a = 22;
     printf("(1) %d\n", a);

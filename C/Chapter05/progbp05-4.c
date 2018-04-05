@@ -2,7 +2,7 @@
 /* 関数プロトタイプ */
 void sumPointer(int a, int b, int* pSum);
 
-main() {
+int main() {
   int a = 1;
   int b = 2;
   int sum = 0;

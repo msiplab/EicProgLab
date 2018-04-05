@@ -2,7 +2,7 @@
 /* 関数プロトタイプ */
 void printVector(int*,int);
 
-main()
+int main()
 {
   int size = 3;
   int a[] = { 1, 2, 3 };

@@ -3,7 +3,7 @@
 int fauto(int);   /* 関数プロトタイプ */
 int fstatic(int); 
 
-main()
+int main()
 {
   int a = 1;
 

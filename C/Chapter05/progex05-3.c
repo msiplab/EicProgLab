@@ -4,7 +4,7 @@
 void display( double[] , int);
 double sqrdnorm( double* , int);
 
-main()
+int main()
 {
   double vector[] = { 3.0, 4.0 };
   int nElements = 2;

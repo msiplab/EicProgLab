@@ -3,7 +3,7 @@
 void display( double[] , int);
 void accvec(double*,double*,int);
 
-main() {
+int main() {
  double a[] = { 1.0, 2.0 };
  double v[] = { 3.0, 4.0 };
 
