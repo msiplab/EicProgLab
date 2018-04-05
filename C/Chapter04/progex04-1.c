@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
   
   int i;
@@ -11,7 +11,7 @@ main()
   for(i=0; i<10; i++) {
     p = (&a[0]+i); /* &a[0] は *a と同じ */
     b = *(&a[0]+i);
-    printf("(&a[0]+%d) = %8d: *(&a[0]+%d)"
+    printf("(&a[0]+%d) = %8p: *(&a[0]+%d)"
 	   " = %2d\n",i,p,i,b);
   }
 }

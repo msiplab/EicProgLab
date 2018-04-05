@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-main()
+int main()
 {
   char str1[] = "string";
   char str2[] = { 's','t','r','i','n','g','\0'};

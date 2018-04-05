@@ -5,7 +5,7 @@ char bin[17]; /* 外部変数 */
 void dec2bin16(unsigned short);
 unsigned short bin2dec16(void);
 
-main()
+int main()
 {
   unsigned short dec;
   char mode;

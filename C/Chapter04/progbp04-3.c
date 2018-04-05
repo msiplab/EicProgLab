@@ -1,5 +1,6 @@
 #include <stdio.h>
-main()
+
+int main()
 {
   char a = 100;
   char b = 3;
