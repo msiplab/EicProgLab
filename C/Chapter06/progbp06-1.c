@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
   display(vector, nElements);
   printf("\t norm^2 = %f\n", 
 	sqrdnorm(&vector[0], nElements));
+	
+  return 0;
 }
 
 void display( double v[] , int nElements) {
