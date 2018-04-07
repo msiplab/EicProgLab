@@ -13,5 +13,7 @@ int main()
     printf("str1 と str2 は同じ文字列です。\n");
   else
     printf("str1 と str2 は異る文字列です。\n");
+  
+  return 0;
 
 }
