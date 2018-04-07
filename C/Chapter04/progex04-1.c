@@ -14,4 +14,6 @@ int main()
     printf("(&a[0]+%d) = %8p: *(&a[0]+%d)"
 	   " = %2d\n",i,p,i,b);
   }
+	
+  return 0;
 }
