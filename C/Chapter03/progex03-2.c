@@ -14,4 +14,6 @@ int main()
   printf("b = %10.7e\n",b);
   printf("c = %18.15e\n",c);
   printf("d = %18.15e\n",d);
+  
+  return 0;
 }
