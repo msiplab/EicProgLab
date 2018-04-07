@@ -12,6 +12,8 @@ int main() {
 
   /* sum の値は？ */
   printf("%d + %d = %d !\n", a, b, sum);
+  
+  return 0;
 
 }
 
