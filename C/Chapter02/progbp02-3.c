@@ -12,4 +12,6 @@ int main()
   printf("signed int(u): %u \n", (si+si)/2+si );
   printf("unsigned int(d): %d \n", (ui+ui)/2+ui );
   printf("unsigned int(u): %u \n", (ui+ui)/2+ui );
+  
+  return 0;
 }
