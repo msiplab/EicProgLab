@@ -17,5 +17,7 @@ int main()
 
   a = n / ( d + 1.0 );
   printf("%d / ( %d + 1.0 ) = %8.4f\n",n,d,a);
+  
+  return 0;
 
 }
