@@ -31,6 +31,8 @@ int main(int argc, char *argv[])
     }
   iIter++;
   } while( fabs(xnxt-xpre) > EPS ); /* 収束判定 */
+  
+  return 0;
 }
 
 double f(double x) /* 関数 */
