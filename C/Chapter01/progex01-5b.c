@@ -16,5 +16,7 @@ int main()
 
   printf("%20.14g\n",
 	 factorial(n)/(factorial(k) * factorial(n-k)));
+	
+  return 0;
 
 }
