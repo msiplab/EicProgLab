@@ -9,4 +9,6 @@ int main()
   printf("char: %d\n",  c );
   printf("signed char: %d\n",  sc );
   printf("unsigned char: %d\n", uc );
+  
+  return 0;
 }
