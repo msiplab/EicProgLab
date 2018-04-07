@@ -9,4 +9,5 @@ int main()
       putchar(c - 'a' + 'A');
     else
       putchar(c);
+  return 0;
 }
