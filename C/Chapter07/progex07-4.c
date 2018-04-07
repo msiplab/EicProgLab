@@ -23,6 +23,8 @@ int main(int argc, char *argv[])
   /* 二つの複素数の積 */
   printf("z0 * z1 = ");
   display(prodOf(z0,z1));
+  
+  return 0;
 }
 
 void display(Complex z)
