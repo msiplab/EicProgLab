@@ -14,4 +14,6 @@ int main()
     putchar( (char)((dec>>iDigit)&mask) + '0' );
   }
   printf(" です。\n");
+  
+  return 0;
 }
