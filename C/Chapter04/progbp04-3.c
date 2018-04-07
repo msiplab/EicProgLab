@@ -18,4 +18,6 @@ int main()
 
   d = (double)a / b;
   printf("a / b = %10.6f\n", d);
+  
+  return 0;
 }
