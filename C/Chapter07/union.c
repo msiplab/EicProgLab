@@ -13,4 +13,6 @@ int main()
 
   printf("%f\n", n.f);
   printf("%#0x\n", n.i);
+  
+  return 0;
 }
