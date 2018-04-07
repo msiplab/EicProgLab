@@ -16,4 +16,6 @@ int main(int argc, char *argv[])
 
   s = ( z.imag < 0 ) ? '-' : '+';
   printf("%f %c i%f\n", z.real, s, fabs(z.imag));
+  
+  return 0;
 }
