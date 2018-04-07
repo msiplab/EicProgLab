@@ -17,4 +17,6 @@ int main()
 {
   printf("%3d\n", f());
   printf("%3d%3d%3d\n", a, b, c);
+  
+  return 0;
 }
