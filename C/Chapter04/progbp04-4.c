@@ -11,5 +11,7 @@ int main()
     acc += a[i]; 
 
   printf("総和 : %d\n",acc);
+  
+  return 0;
 
 }
