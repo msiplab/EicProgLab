@@ -13,6 +13,8 @@ int main()
     }
     printf("(3) %d\n", a);
     sub();
+    
+    return 0;
 }
 
 
