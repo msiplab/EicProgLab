@@ -30,5 +30,7 @@ int main()
 
   var /= n; /* 分散 */
   printf("\t 分散: %g\n", var);
+  
+  return 0;
 
 }
