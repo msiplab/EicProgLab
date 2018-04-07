@@ -12,6 +12,8 @@ int main()
 
   printf("auto  : %d\n", fauto(a));
   printf("static: %d\n", fstatic(a));
+  
+  return 0;
 }
 
 int fauto(int a)
