@@ -27,6 +27,8 @@ while (x < xe) {
     fprintf(stdout,  "%g, %g\n", t, v); /* 標準出力 */
     rceuler(&x, &y, h);
   } 
+  
+  return 0;
 }
 
 /* オイラー法 */
