@@ -38,4 +38,6 @@ int main(int argc,char *argv[])
   /* ファイルのクローズ */
   fclose(pfin);
   fclose(pfout);
+	
+  return 0;
 }
