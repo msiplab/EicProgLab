@@ -50,6 +50,8 @@ int main()
 
   /* 領域解放 */
   free(pVector);
+  
+  return 0;
 }
 
 /* ベクトルの長さを計算する関数 */
