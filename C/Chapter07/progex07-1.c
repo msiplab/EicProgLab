@@ -10,6 +10,8 @@ int main(int argc, char *argv[])
   z[0] = atof(argv[1]);
   z[1] = atof(argv[2]);
   display(z);
+  
+  return 0;
 }
 
 void display(double z[])
