@@ -55,4 +55,6 @@ int main()
 	/* 平方根の表示 */
 	printf("%f の平方根:\n", a);
 	printf(" %21.16g \n", x);
+	
+	return 0;
 }
