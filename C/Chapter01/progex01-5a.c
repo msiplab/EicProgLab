@@ -21,5 +21,7 @@ int main()
   
   printf("%20.14g\n",
 	 factorial0/(factorial1 * factorial2));
+	
+  return 0;
 
 }
