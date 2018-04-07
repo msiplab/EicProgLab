@@ -15,6 +15,7 @@ int main()
   iCol = 1;
   printf("\t matrix(%d,%d) = %f", iRow, iCol,
 	 getElement(&matrix[0], iRow, iCol));
+  return 0;
 }
 
 void display(double m[][NCOLS],
