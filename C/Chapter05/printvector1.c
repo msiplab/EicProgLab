@@ -8,6 +8,8 @@ int main()
   int a[] = { 1, 2, 3 };
 
   printVector( a, size );
+  
+  return 0;
 }
 
 void printVector( int p[], int size )
