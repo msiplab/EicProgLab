@@ -12,6 +12,8 @@ int main()
     printf("%d\n", a); /* a の値は不変！*/
     call_by_reference(&a); /* 参照呼出し */
     printf("%d\n", a); /* a の値は変わる！ */
+    
+    return 0;
 }
 
 void call_by_value(int a)
