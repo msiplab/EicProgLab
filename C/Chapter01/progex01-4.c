@@ -25,4 +25,6 @@ int main()
 	/* 平方根の表示 */
 	printf("%f の平方根:\n",a);
 	printf(" %21.16g（反復回数 %d 回）\n", x, k);	
+	
+	return 0;
 }
