@@ -17,5 +17,5 @@ int main()
   printf("一辺の長さが %f の正三角形の面積\n   = %f\n",
 	 length, area);
 
-　return 0;
+  return 0;
 }
