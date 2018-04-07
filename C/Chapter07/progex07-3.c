@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
   z.real = atof(argv[1]);
   z.imag = atof(argv[2]);
   display(z);
+  
+  return 0;
 }
 
 void display(Complex z)
