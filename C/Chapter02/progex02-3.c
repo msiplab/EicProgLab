@@ -21,4 +21,6 @@ int main()
     
   }
   printf("\n\t10進数の値は %u です。\n", dec);
+  
+  return 0;
 }
