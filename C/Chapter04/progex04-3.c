@@ -38,6 +38,8 @@ int main()
   default:
     exit(EXIT_FAILURE);
   }
+  
+  return 0;
 }
 
 /* 10進数→2進数変換 */
