@@ -19,4 +19,6 @@ int main(int argc,char *argv[])
 
  /* 標準エラー */
       fprintf(stderr, "終了\n");
+	
+  return 0;
 }
