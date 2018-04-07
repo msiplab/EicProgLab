@@ -32,4 +32,6 @@ int main()
   printf("\t 分散: %g\n", var);
 
   free(a);
+  
+  return 0;
 }
