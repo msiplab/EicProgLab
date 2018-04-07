@@ -15,4 +15,6 @@ int main()
     max = c;
 
   printf("max = %d\n", max);
+  
+  return 0;
 }
