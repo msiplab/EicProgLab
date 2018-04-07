@@ -38,6 +38,8 @@ int main() {
   /* 表示 */
   printf("length = %d\n", v.length); 
   display(v);
+	
+  return 0;
 }
 
 /* ベクトルの初期化 */
