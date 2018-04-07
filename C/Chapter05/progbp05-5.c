@@ -14,6 +14,8 @@ int main() {
   display( a, nElements);
   printf("v = \n");
   display( v, nElements);
+ 
+  return 0;
 }
 
 void display(double v[] , int nElements) {
