@@ -8,7 +8,7 @@ int main()
   double d;
  
   c = a * b;
-  d = a * b;
+  d = (double)a * (double)b;
 
   printf("a = %10.7e\n",a);
   printf("b = %10.7e\n",b);
