@@ -1,5 +1,5 @@
 '''
-CiaoMondoクラス
+ciaoモジュール 
 '''
 class CiaoMondo:	
 	def __init__(self):
