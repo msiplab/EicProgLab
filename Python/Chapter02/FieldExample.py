@@ -1,4 +1,4 @@
-'''メソッドの例'''
+'''フィールドの例'''
 import math
 
 class MyVector:
