@@ -11,7 +11,7 @@ class MyVector:
 
 if __name__ == '__main__':
 	
-	import MethodExample as me
+	import methodexample as me
 	
 	vector = me.MyVector()
 	

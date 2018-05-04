@@ -5,17 +5,19 @@ import sys
 
 def main(args):
 	'''main関数'''
-	z1 = mc.MyComplex()
-	z2 = mc.MyComplex()
+	z = mc.MyComplex()
 	
-	z1.real, z1.imag = float(args[1]), float(args[2])
-	z2.real, z2.imag = float(args[3]), float(args[4])
+	z.real, z.imag = float(args[1]), float(args[2])
 	
-	# インスタンスメソッドの呼び出し
-	z1.display()
-	z2.display()
+	display(z)
+
+
+def display(z):
+	'''複素数表示関数'''
+	
+	s = '+j' if z.imag > 0 else '-j'
+	print(str(z.real)+s+str(math.fabs(z.imag)))
 
 if __name__ == '__main__':
 	
 	main(sys.argv)
-	
