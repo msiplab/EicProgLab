@@ -1,5 +1,6 @@
 '''push-down スタックの例'''
-import my_stack as ms
+import my_stack_safe as ms
+import top_access as ta
 
 STACK_SIZE = 100 # スタックサイズ
 
@@ -11,6 +12,7 @@ def main():
 	myStack.pushDown('a') # データ入力
 	myStack.pushDown('b')
 	myStack.pushDown('c')
+	ta.displayTop(myStack)
 	
 	while( not myStack.isEmpty() ): # データ出力
 		print( myStack.popUp() )
