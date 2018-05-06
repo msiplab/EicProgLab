@@ -18,7 +18,7 @@ class MyVector:
 
 if __name__ == '__main__':
 	
-	import fieldexample as fe
+	import field_example as fe
 	
 	vector = fe.MyVector(1., 2., 3.)
 	
