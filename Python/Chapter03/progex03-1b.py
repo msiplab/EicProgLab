@@ -1,6 +1,6 @@
 '''push-down スタックの例'''
 import my_stack as ms
-import topaccess as ta
+import top_access as ta
 
 STACK_SIZE = 100 # スタックサイズ
 
