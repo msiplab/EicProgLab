@@ -25,7 +25,7 @@
     $ cd ~/EicProgLab
     $ git stash
     $ git pull
-    
+
 編集内容を再度反映させる際は以下のコマンドを実行してください。
 
     $ git stash pop
