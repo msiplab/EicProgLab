@@ -3,24 +3,24 @@ import sys
 class MyStack:
     """push-down スタッククラス"""
     
-    def __init__(self, stackSize):
+    def __init__(self, stacksize):
         """コンストラクタ（初期化）"""
         
         # フィールド
-        self.myStack = [ ' ' for i in range(stackSize) ]
+        self.mystack = [ ' ' for i in range(stacksize) ]
         self.top  = -1;
         
-    def pushDown(self, data):
+    def pushdown(self, data):
         """プッシュダウン"""
         
         self.top += 1
-        if (self.top > len(self.myStack)):
+        if (self.top > len(self.mystack)):
             print('stack overflow', file=sys.stderr)
             sys.exit(0)
             
-        self.myStack[self.top] = data
+        self.mystack[self.top] = data
         
-    def popUp(self):
+    def popup(self):
         """ポップアップ"""
         
         if (self.top < 0):
@@ -29,9 +29,9 @@ class MyStack:
         
         self.top -= 1
         
-        return self.myStack[self.top+1]
+        return self.mystack[self.top+1]
         
-    def isEmpty(self):
+    def isempty(self):
         """空か否か"""
         
         if (self.top < 0):

@@ -7,15 +7,15 @@ STACK_SIZE = 100 # スタックサイズ
 def main():
     """main関数"""
     
-    myStack = ms.MyStack(STACK_SIZE) # インスタンス化
+    mystack = ms.MyStack(STACK_SIZE) # インスタンス化
     
-    myStack.pushDown('a') # データ入力
-    myStack.pushDown('b')
-    myStack.pushDown('c')
-    ta.displayTop(myStack)
+    mystack.pushdown('a') # データ入力
+    mystack.pushdown('b')
+    mystack.pushdown('c')
+    ta.displaytop(mystack)
     
-    while( not myStack.isEmpty() ): # データ出力
-        print( myStack.popUp() )
+    while( not mystack.isempty() ): # データ出力
+        print( mystack.popup() )
         
 if __name__ == '__main__':
     

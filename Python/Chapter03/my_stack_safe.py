@@ -3,11 +3,11 @@ import sys
 class MyStack:
     """push-down スタッククラス"""
     
-    def __init__(self, stackSize):
+    def __init__(self, stacksize):
         """コンストラクタ（初期化）"""
         
         # フィールド
-        self.__myStack = [ ' ' for i in range(stackSize) ]
+        self.__mystack = [ ' ' for i in range(stacksize) ]
         self.__top  = -1;
         
     @property
@@ -15,17 +15,17 @@ class MyStack:
         """top のゲッターメソッド"""
         return self.__top;
         
-    def pushDown(self, data):
+    def pushdown(self, data):
         """プッシュダウン"""
         
         self.__top += 1
-        if (self.__top > len(self.__myStack)):
+        if (self.__top > len(self.__mystack)):
             print('stack overflow', file=sys.stderr)
             sys.exit(0)
             
-        self.__myStack[self.__top] = data
+        self.__mystack[self.__top] = data
         
-    def popUp(self):
+    def popup(self):
         """ポップアップ"""
         
         if (self.__top < 0):
@@ -34,9 +34,9 @@ class MyStack:
         
         self.__top -= 1
         
-        return self.__myStack[self.__top+1]
+        return self.__mystack[self.__top+1]
         
-    def isEmpty(self):
+    def isempty(self):
         """空か否か"""
         
         if (self.__top < 0):

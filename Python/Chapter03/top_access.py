@@ -1,4 +1,4 @@
-def displayTop(myStack):
+def displaytop(mystack):
     """topの表示"""
-    print('Top: ', myStack.top)
-    myStack.top = 0
+    print('Top: ', mystack.top)
+    mystack.top = 0

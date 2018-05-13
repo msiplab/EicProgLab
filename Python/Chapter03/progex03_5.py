@@ -4,8 +4,8 @@ class Person:
 		self.__konomi = konomi
 		self.kibun = '普通'
 		
-	def listenToMusic(self, cdPlayer):
-		genre = cdPlayer.playCd()
+	def listentomusic(self, cdplayer):
+		genre = cdplayer.playcd()
 		if genre == self.__konomi:
 			self.kibun = '楽しい' # ジャンル=好み
 		else:
