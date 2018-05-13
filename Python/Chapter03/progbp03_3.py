@@ -1,15 +1,15 @@
-import progex03_5 as pg35
+import progex03_5 as pe35
 
 def main():
 	# Person をインスタンス化 
-	taro = pg35.Person('太郎', 'アニメ')
-	hanako = pg35.Person('花子', 'アイドル')
+	taro = pe35.Person('太郎', 'アニメ')
+	hanako = pe35.Person('花子', 'アイドル')
 	
 	# Cd をインスタンス化
-	animeCd = pg35.Cd('アニメ')
+	animeCd = pe35.Cd('アニメ')
 	
 	# CdPlayer をインスタンス化
-	panasonyPlayer = pg35.CdPlayer()
+	panasonyPlayer = pe35.CdPlayer()
 	
 	# panasonyPlayer に animeCd をセット
 	panasonyPlayer.cd = animeCd
