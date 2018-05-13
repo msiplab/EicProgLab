@@ -1,14 +1,14 @@
 class CiaoMondo:
-	'''CiaoMondoクラス'''	
+    """CiaoMondoクラス"""	
 	
-	def greet(self):
-		'''あいさつメソッド'''
-		
-		print('Ciao Mondo!')
+    def greet(self):
+        """あいさつメソッド"""
+        print('Ciao Mondo!')
 	
 if __name__ == '__main__':
 	
-	import CiaoMondo as cm
+	import ciao_mondo
+	 as cm
 	
 	ciao = cm.CiaoMondo()
 	

@@ -1,10 +1,10 @@
-'''インスタンス化の例'''
+"""インスタンス化の例"""
 import MyComplex as mc
 import math
 import sys
 
 def main(args):
-	'''main関数'''
+	"""main関数"""
 	z1 = mc.MyComplex()
 	z2 = mc.MyComplex()
 	
