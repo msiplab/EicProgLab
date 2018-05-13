@@ -1,16 +1,16 @@
 def main():
     
     x = [ 1.0, 3.0 ]                   # vector x
-    A = [ [  .5, .5 ],                 # matrix A 
+    a = [ [  .5, .5 ],                 # matrix A 
           [ -.5, .5 ] ]
     y = [ 0 for iRow in range(2) ]  # vector y
     
-    for iRow in range(len(y)):     # y = Ax
-        for iCol in range(len(x)):
-            y[iRow] += A[iRow][iCol] * x[iCol]
+    for irow in range(len(y)):     # y = Ax
+        for icol in range(len(x)):
+            y[irow] += a[irow][icol] * x[icol]
     
-    for iRow in range(len(y)):
-        print(y[iRow])               # display y
+    for irow in range(len(y)):
+        print(y[irow])               # display y
 
 if __name__  == '__main__':
     

@@ -4,11 +4,11 @@ def main():
           [ 1.0, 2.0],
           [ 1.0, 2.0, 3.0] ]
 	
-	for iRow in range(len(a)):
+	for irow in range(len(a)):
 		
-		for iCol in range(len(a[iRow])):
+		for icol in range(len(a[irow])):
 			
-			print(a[iRow][iCol], ' ', end='')
+			print(a[irow][icol], ' ', end='')
 			
 		print()
 

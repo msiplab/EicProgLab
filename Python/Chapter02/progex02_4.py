@@ -8,22 +8,22 @@ top = int()
 def main():
     """main関数"""
     
-    initStack()   # スタック初期化
+    initstack()   # スタック初期化
     
-    pushDown('a') # データ入力 
-    pushDown('b')
-    pushDown('c')
+    pushdown('a') # データ入力 
+    pushdown('b')
+    pushdown('c')
     
-    while( not isEmpty() ): # データ出力
-        print(popUp())
+    while( not isempty() ): # データ出力
+        print(popup())
  
-def initStack():
+def initstack():
     """スタック初期化"""
     global top
     
     top = -1
     
-def pushDown(data):
+def pushdown(data):
     """プッシュ"""
     global top
     
@@ -35,7 +35,7 @@ def pushDown(data):
     
     mystack[top] = data
     
-def popUp():
+def popup():
     """ポップ"""
     global top
     
@@ -47,7 +47,7 @@ def popUp():
     
     return mystack[top+1]
 
-def isEmpty():
+def isempty():
     """空か否か"""
     
     if (top < 0):
