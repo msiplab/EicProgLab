@@ -6,7 +6,7 @@ def main():
     # 配列要素の入力
     print('3x3行列の要素を入力して下さい:')    
     for irow in range(3):
-        rowvector = input()
+        rowvector = input('{0:d}行目> '.format(irow+1))
         rowelements = re.split('\s+', rowvector)
         for icol in range(3):
             matrix[irow][icol] = float(rowelements[icol])
