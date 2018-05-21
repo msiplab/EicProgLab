@@ -11,7 +11,7 @@ def main():
                         + str(ord(c)) + '.\n')
     sys.stdout.flush()
     # 標準エラー
-    sys.stderr
+    sys.stderr.write('Finish!')
     
 if __name__ == '__main__':
     main()
