@@ -4,7 +4,7 @@ def main():
     # 名前の入力
     name = input('名前を入力してください> ')
     # 年齢の入力（整数が入力されるまで問い続ける）
-    while (True):
+    while True:
         try:
             age = int(input('年齢を入力してください> '))
             break
