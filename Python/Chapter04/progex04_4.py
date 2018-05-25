@@ -13,6 +13,8 @@ def main(args):
         print('整数ではありません。')
     else:
         print('例外処理は発生しませんでした。')
+    finally:
+        print('finallyブロックは必ず実行されます。')
 
 
 if __name__ == '__main__':
