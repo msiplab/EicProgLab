@@ -7,10 +7,9 @@ class CiaoMondo:
 	
 if __name__ == '__main__':
 	
-	import ciao_mondo
-	 as cm
+	from ciao_mondo import CiaoMondo
 	
-	ciao = cm.CiaoMondo()
+	ciao = CiaoMondo()
 	
 	print(ciao.__doc__)
 	
