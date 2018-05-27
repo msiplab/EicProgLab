@@ -1,4 +1,6 @@
-from progex03_5 import Person, Cd, CdPlayer
+from person import Person
+from cd import Cd
+from cd_player import CdPlayer
 
 def main():
 	# Person をインスタンス化 
@@ -22,6 +24,5 @@ def main():
 	print('太郎の気分： ' + taro.kibun)
 	print('花子の気分： ' + hanako.kibun)
     
-if __name__ == '__main__':
-	
+if __name__ == '__main__':	
 	main()
