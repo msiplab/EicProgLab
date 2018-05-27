@@ -13,7 +13,7 @@ class DigitalTv3d(DigitalTv):
             elif channel == 12:
                 print('NHK教育3D表示中...')
             else:
-                pass
+                print('3D表示でいません...')
         else:
             print('3D表示できません')
 
