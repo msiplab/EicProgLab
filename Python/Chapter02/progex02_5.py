@@ -1,11 +1,11 @@
 """インスタンス化の例"""
-import my_complex as mc
+from my_complex import MyComplex
 import math
 import sys
 
 def main(args):
     """main関数"""
-    z = mc.MyComplex()
+    z = MyComplex()
     
     z.real, z.imag = float(args[1]), float(args[2])
     
