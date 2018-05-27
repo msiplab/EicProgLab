@@ -1,10 +1,10 @@
-'''
+"""
 example2_1
 
 例題2-1（基礎）
 
 Copyright (c) 2018 Shogo MURAMATSU, All rights reserved
-'''
+"""
 import othello
 
 def main():

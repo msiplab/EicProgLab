@@ -1,24 +1,8 @@
-class PointState:
-    '''マス目の状態クラス'''
-    
-    def __init__(self, mark):
-        '''コンストラクタ'''
-        self.__mark = mark
-        
-    def __str__(self):
-        '''文字列への変換'''
-        return self.__mark 
-
-
-class BoardOutOfRangeException(Exception):
-    '''盤外指定時の例外クラス（Exceptionの子クラス）'''
-    
-    def __init__(self, msg):
-        Exception.__init__(self, msg)
-        
+from point_state import PointState
+from board_out_of_range_exception import BoardOutOfRangeException
 
 class Board:
-    '''リバーシ（オセロ）の盤クラス'''
+    """リバーシ（オセロ）の盤クラス"""
     
     # ここクラスでしか使わない定数
     __NONE = PointState('.')
@@ -26,7 +10,7 @@ class Board:
     __WHITE_STONE = PointState('W')
 
     def __init__(self):
-        '''コンストラクタ'''        
+        """コンストラクタ"""        
         # 最初の手番を黒に設定
         self.__currentStone = Board.__BLACK_STONE        
         # 盤上の石をすべてクリア(_NONEと設定
@@ -41,7 +25,7 @@ class Board:
         
 
     def displayState(self):
-        '''盤の状態表示'''
+        """盤の状態表示"""
         try:
             # 列番号の表示
             print('\n 12345678') 
@@ -64,14 +48,14 @@ class Board:
             print(boore.message)
 
     def change(self):
-        '''パス'''
+        """パス"""
         self.__currentStone = self.__getEnemyStone()
 
     def tryPlaceStone(self, x, y):
-        '''
+        """
         座標(x,y)に石を試しに置く。
         石を置こうとする場所が盤の範囲外であれば例外を投げる。
-        '''
+        """
         # 例外を萎える可能性あり
         if self._getState(x,y) != Board.__NONE:
             return False
@@ -93,7 +77,7 @@ class Board:
             self.change()
             
     def _getState(self, x, y):
-        '''指定した位置のマスの状態を取得'''
+        """指定した位置のマスの状態を取得"""
         
         # マスの範囲外であれば例外を投げる
         if x < 1 or x > 8 or y < 1 or y > 8:
@@ -123,11 +107,11 @@ class Board:
             return False
     
     def __setState(self, x, y, state):
-        '''盤のx列目y行目のマスの状態を与えられた状態に更新'''
+        """盤のx列目y行目のマスの状態を与えられた状態に更新"""
         self.__stateArray[x-1][y-1] = state
 
     def __getEnemyStone(self):
-        '''相手（次の手番）の色を取得'''
+        """相手（次の手番）の色を取得"""
         if self.__currentStone == Board.__BLACK_STONE:
             return Board.__WHITE_STONE
         else:
