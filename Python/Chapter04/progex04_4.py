@@ -1,4 +1,5 @@
 import sys
+
 def main(args):
     try:
         nom = int(args[1])  # 分子の読込み
