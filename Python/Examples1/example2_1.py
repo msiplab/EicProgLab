@@ -5,12 +5,12 @@ example2_1
 
 Copyright (c) 2018 Shogo MURAMATSU, All rights reserved
 """
-import othello
+from board import Board
 
 def main():
     try:
         # Board型のインスタンスboardを生成
-        board = othello.Board()
+        board = Board()
         # 盤(board)の状態を表示（初期状態）
         board.displayState()
         # 盤(board)の3列4行目に手番の石(Black)を置いてみる
