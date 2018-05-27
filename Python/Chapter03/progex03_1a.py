@@ -1,12 +1,12 @@
 """push-down スタックの例"""
-import my_stack as ms
+from my_stack import MyStack
 
 STACK_SIZE = 100 # スタックサイズ
 
 def main():
     """main関数"""
     
-    mystack = ms.MyStack(STACK_SIZE) # インスタンス化
+    mystack = MyStack(STACK_SIZE) # インスタンス化
     
     mystack.pushdown('a') # データ入力
     mystack.pushdown('b')

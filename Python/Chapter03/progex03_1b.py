@@ -1,18 +1,18 @@
 """push-down スタックの例"""
-import my_stack as ms
-import top_access as ta
+from my_stack import MyStack
+from top_access import displaytop
 
 STACK_SIZE = 100 # スタックサイズ
 
 def main():
     """main関数"""
     
-    mystack = ms.MyStack(STACK_SIZE) # インスタンス化
+    mystack = MyStack(STACK_SIZE) # インスタンス化
     
     mystack.pushdown('a') # データ入力
     mystack.pushdown('b')
     mystack.pushdown('c')
-    ta.displaytop(mystack)
+    displaytop(mystack)
     
     while( not mystack.isempty() ): # データ出力
         print( mystack.popup() )
