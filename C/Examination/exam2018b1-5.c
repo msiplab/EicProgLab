@@ -27,7 +27,7 @@ double newtonupdate(double* px) {
   xpre = *px;
   xnxt = xpre - f(xpre)/df(xpre);
   err = fabs(xnxt - xpre);
-  /* (c) 値の更新 */
+  /* (a) 値の更新 */
   *px = xnxt;
   
   return err;
