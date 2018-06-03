@@ -9,8 +9,10 @@ def main():
     
     # 派生クラス
     tv3d = DigitalTv3d('新潟')
+    tv3d.is3d = False
     tv3d.display(8)
-    tv3d.display3d(8)
+    tv3d.is3d = True
+    tv3d.display(8)
     
 if __name__ == '__main__':
 	main()
