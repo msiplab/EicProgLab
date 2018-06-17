@@ -3,35 +3,41 @@ from tkinter.ttk import *
 
 
 class ButtonArray(Frame):
-	"""ttk.Buton の例"""
+    """ttk.Buton の例"""
 
     def __init__(self,master=None):       
-		"""コンストラクタ"""
+        """コンストラクタ"""
         super().__init__(master)
         self['padding']=(20,20) 
         self.pack()
+        self.create_style()
         self.create_widgets()
         
-    def create_widgets(self):
-		"""ウィジットの生成"""
-        # スタイルの設定
+        
+    def create_style(self):
+        """スタイルの生成"""
+        # ボタンスタイルの設定
         style = Style()
-        style.configure('My.TButton', # ボタン
-			font = ('Helveica', 12, 'bold'),
+        style.configure('My.TButton', 
+            font = ('Helveica', 12, 'bold'),
             foreground = 'yellow',
             background = 'blue')
-        style.configure('My.TLabel', # ラベル
-			font = ('Helveica', 12, 'italic'),
-			anchor = 'center',
+        # ラベルスタイルの設定
+        style.configure('My.TLabel', 
+            font = ('Helveica', 12, 'italic'),
+            anchor = 'center',
             foreground = 'green',
             background = 'white')
+        
+    def create_widgets(self):
+        """ウィジットの生成"""
         # ボタン配列の生成
         buttons = [ [ Button(self, style='My.TButton') 
                             for icol in range(3) ] 
                             for irow in range(2) ]
         for irow in range(2):
             for icol in range(3):
-				# 左クリック時の動作の登録
+                # 左クリック時の動作の登録
                 buttons[irow][icol].bind('<Button-1>', self.press)
         # ボタン配列の配置
         for irow  in range(2):
@@ -48,7 +54,7 @@ class ButtonArray(Frame):
         
         
     def press(self,event):
-		"""ボタンクリックの動作"""
+        """ボタンクリックの動作"""
         self.__var.set(event.widget['text']) 
         
 if __name__ == '__main__':

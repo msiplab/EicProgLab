@@ -44,12 +44,13 @@ class BoardTable(Frame):
         super().__init__(master)
         self['padding']=(20,20)
         self.pack()
+        self.create_style()
         self.create_widgets()
         
         
     def create_widgets(self):
-        """ウィジットの生成"""
-        # スタイルの設定
+        """スタイルの生成"""
+        # ラベルのスタイル
         style = Style()
         style.configure('C.TLabel',
             borderwidth = 2,
@@ -58,6 +59,10 @@ class BoardTable(Frame):
             font = ('Helvetica', '16'),
             background='green',
             foreground='green')
+    
+    
+    def create_widgets(self):
+        """ウィジットの生成"""
         # マス目ラベルの生成
         self.__cells = [ [ Label(self, text='●', style='C.TLabel')
                             for icol in range(8) ] 
