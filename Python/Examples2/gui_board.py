@@ -18,6 +18,7 @@ class GuiBoard(Board):
     def displayState(self):
         """ボードの状態の表示"""
         try:
+            # ボード状態の更新
             for y in range(1,9):
                 for x in range(1,9):
                     if self._getState(x, y) == Board._WHITE_STONE:
@@ -25,9 +26,11 @@ class GuiBoard(Board):
                     elif self._getState(x, y) == Board._BLACK_STONE:
                         self.__table.setCellFg(x,y,'black')
         except BoardOutOfRangeException as boore:
+            # 例外処理
             print()
             print(boore)            
         finally:
+            # 表示の更新
             self.__root.update()
             super().displayState()
             time.sleep(1)
@@ -36,7 +39,8 @@ class GuiBoard(Board):
 class BoardTable(Frame):
     """ボード用のテーブル"""
     
-    def __init__(self,master=None):        
+    def __init__(self,master=None):
+        """コンストラクタ"""
         super().__init__(master)
         self['padding']=(20,20)
         self.pack()
@@ -44,29 +48,29 @@ class BoardTable(Frame):
         
         
     def create_widgets(self):
-        self.__cells = [ [ BoardCell(self) 
+        """ウィジットの生成"""
+        # スタイルの設定
+        style = Style()
+        style.configure('C.TLabel',
+            borderwidth = 2,
+            padding = (6,0),
+            relief = RIDGE,
+            font = ('Helvetica', '16'),
+            background='green',
+            foreground='green')
+        # マス目ラベルの生成
+        self.__cells = [ [ Label(self, text='●', style='C.TLabel')
                             for icol in range(8) ] 
                             for irow in range(8) ]
+        # マス目ラベルのグリッド配置
         for irow  in range(8):
             for icol in range(8):
-                self.__cells[irow][icol].grid(row=irow, 
-                                                 column=icol)
+                cell = self.__cells[irow][icol]
+                cell.grid(row=irow, column=icol)
                                                 
     def setCellFg(self, x, y, fgcolor):
+        """コマの色の更新"""
         self.__cells[y-1][x-1]['foreground'] = fgcolor
-        
-
-class BoardCell(Label):
-    """マス目の設定"""
-    def __init__(self,master=None):
-        super().__init__(master)
-        self['borderwidth'] = 2
-        self['padding'] = (6,0)
-        self['relief'] = RIDGE
-        self['font'] = ('Helvetica','16')   
-        self['text'] = '●'
-        self['background']='green'
-        self['foreground']='green'
 
  
 if __name__ == '__main__':
