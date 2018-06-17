@@ -6,11 +6,13 @@ example2_1
 Copyright (c) 2018 Shogo MURAMATSU, All rights reserved
 """
 from board import Board
+#from gui_board import GuiBoard
+from board_out_of_range_exception import BoardOutOfRangeException
 
 def main():
     try:
         # Board型のインスタンスboardを生成
-        board = Board()
+        board = Board() # GuiBoard
         # 盤(board)の状態を表示（初期状態）
         board.displayState()
         # 盤(board)の3列4行目に手番の石(Black)を置いてみる
@@ -33,7 +35,7 @@ def main():
         
         print()
         
-    except othello.BoardOutOfRangeException as boore:
+    except BoardOutOfRangeException as boore:
         print()
         print(boore)
         

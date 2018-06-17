@@ -4,24 +4,24 @@ from board_out_of_range_exception import BoardOutOfRangeException
 class Board:
     """リバーシ（オセロ）の盤クラス"""
     
-    # ここクラスでしか使わない定数
-    __NONE = PointState('.')
-    __BLACK_STONE = PointState('B')
-    __WHITE_STONE = PointState('W')
+    # このクラスと派生クラスでしか使わない定数
+    _NONE = PointState('.')
+    _BLACK_STONE = PointState('B')
+    _WHITE_STONE = PointState('W')
 
     def __init__(self):
         """コンストラクタ"""        
         # 最初の手番を黒に設定
-        self.__currentStone = Board.__BLACK_STONE        
+        self.__currentStone = Board._BLACK_STONE        
         # 盤上の石をすべてクリア(_NONEと設定
-        self.__stateArray = [ [ Board.__NONE
+        self.__stateArray = [ [ Board._NONE
                                 for irow in range(1,9) ]
                                 for icol in range(1,9) ]        
         # 盤を初期状態にするために石を置く
-        self.__setState(4, 4, Board.__WHITE_STONE)
-        self.__setState(5, 4, Board.__BLACK_STONE)
-        self.__setState(4, 5, Board.__BLACK_STONE)
-        self.__setState(5, 5, Board.__WHITE_STONE)
+        self.__setState(4, 4, Board._WHITE_STONE)
+        self.__setState(5, 4, Board._BLACK_STONE)
+        self.__setState(4, 5, Board._BLACK_STONE)
+        self.__setState(5, 5, Board._WHITE_STONE)
         
 
     def displayState(self):
@@ -40,7 +40,7 @@ class Board:
             print()
             # 現在の手番の色の表示
             print('現在の手番：',end='')
-            if self.__currentStone == Board.__BLACK_STONE:
+            if self.__currentStone == Board._BLACK_STONE:
                 print('黒(B)')
             else:
                 print('白(W)')            
@@ -57,7 +57,7 @@ class Board:
         石を置こうとする場所が盤の範囲外であれば例外を投げる。
         """
         # 例外を萎える可能性あり
-        if self._getState(x,y) != Board.__NONE:
+        if self._getState(x,y) != Board._NONE:
             return False
         # 石を置こうとする場所の隣を返せるかどうかを確認
         trial = False
@@ -112,7 +112,7 @@ class Board:
 
     def __getEnemyStone(self):
         """相手（次の手番）の色を取得"""
-        if self.__currentStone == Board.__BLACK_STONE:
-            return Board.__WHITE_STONE
+        if self.__currentStone == Board._BLACK_STONE:
+            return Board._WHITE_STONE
         else:
-            return Board.__BLACK_STONE
+            return Board._BLACK_STONE
