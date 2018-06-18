@@ -48,7 +48,7 @@ class BoardTable(Frame):
         self.create_widgets()
         
         
-    def create_widgets(self):
+    def create_style(self):
         """スタイルの生成"""
         # ラベルのスタイル
         style = Style()
