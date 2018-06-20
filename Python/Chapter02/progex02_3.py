@@ -3,7 +3,7 @@ def main():
     x = [ 1.0, 3.0 ]                   # vector x
     a = [ [  .5, .5 ],                 # matrix A 
           [ -.5, .5 ] ]
-    y = [ 0 for iRow in range(2) ]  # vector y
+    y = [ 0.0 for iRow in range(2) ]  # vector y
     
     for irow in range(len(y)):     # y = Ax
         for icol in range(len(x)):
