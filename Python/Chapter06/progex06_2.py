@@ -1,3 +1,5 @@
+# 予め NumPy をインストール
+# $ sudo apt-get install python3-numpy
 import numpy as np
 
 def main():

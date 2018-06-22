@@ -1,3 +1,5 @@
+# 予め SciPy をインストール
+# $ sudo apt-get install python3-scipy
 import sys
 import numpy as np
 from scipy import optimize
