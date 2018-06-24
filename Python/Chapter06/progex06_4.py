@@ -11,16 +11,14 @@ def main():
     te = 1.0e-3 # 1.0[ms] 終了時刻 
     v0 = [ 0.0, 0.0 ] # v = 0.0[V], dv/dt = 0.0 [V/s] 初期条件
     h = 1.0e-5 # ステップ
-    t = np.arange(ts, te, h) 
+    t = np.arange(ts, te, h) # 時刻の設定
     
-    # 計算の実行と標準出力
+    # 計算の実行
     zeta = r * c / (2 * np.sqrt( ell * c ) )
     x = t / np.sqrt(ell * c) # x の設定
     y0 = np.array( v0 ) / e # y, dy/dx の初期値設定
-        
-    # 数値積分
-    y = odeint(f, y0, x, args = ( zeta, ) )
-    v = e * y;
+    y = odeint(f, y0, x, args = ( zeta, ) ) # 数値積分
+    v = e * y
     
     # グラフ描画
     plt.plot(t,v[:,0])
