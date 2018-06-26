@@ -13,7 +13,7 @@ class Board:
         """コンストラクタ"""        
         # 最初の手番を黒に設定
         self.__currentStone = Board._BLACK_STONE        
-        # 盤上の石をすべてクリア(_NONEと設定
+        # 盤上の石をすべてクリア(_NONE)と設定
         self.__stateArray = [ [ Board._NONE
                                 for irow in range(1,9) ]
                                 for icol in range(1,9) ]        
@@ -68,10 +68,10 @@ class Board:
         trial = trial | self.__tryReverseNext(x, y, +1, +1) # 右下
         trial = trial | self.__tryReverseNext(x, y, +1, -1) # 右上
         trial = trial | self.__tryReverseNext(x, y, -1, +1) # 左下
-        trial = trial | self.__tryReverseNext(x, y, -1, -1) # 上上
+        trial = trial | self.__tryReverseNext(x, y, -1, -1) # 左上
         # 隣の石を返すことができる場合
         if trial: 
-            # 石を置いてボードの状態を更新する。
+            # 石を置いてボードの状態を更新する
             self.__setState(x, y, self.__currentStone)
             # 手番を相手に渡す
             self.change()
