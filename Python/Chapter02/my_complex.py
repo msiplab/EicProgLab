@@ -3,8 +3,8 @@ import math
 class MyComplex:
     """複素数クラス"""
     # フィールド
-    real = float()
-    mag = float()
+    real = 0.0
+    imag = 0.0
     
     '''
     def __init__(self, real, imag):
