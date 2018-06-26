@@ -79,6 +79,5 @@ class BoardTable(Frame):
 
  
 if __name__ == '__main__':
-    
     board = GuiBoard()
     
