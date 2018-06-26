@@ -4,7 +4,7 @@ class IThreeDimensionalObject(metaclass=ABCMeta):
     
     @abstractmethod
     def isinside(self,x,y,z):
-               raise NotImplemented()
+        raise NotImplemented()
         
     @property
     @abstractmethod
