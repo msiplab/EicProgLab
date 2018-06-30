@@ -2,14 +2,14 @@ import math
 
 class MyComplex:
     """複素数クラス"""
-    # フィールド
+    # フィールド（初期値）
     real = 0.0
     imag = 0.0
     
     '''
     def __init__(self, real, imag):
         """コンストラクタ"""
-        # フィールドの初期化
+        # フィールドの初期化（クラス直下同名フィールドをコメントアウト）
         self.real, self.imag = real, imag
     '''
     
