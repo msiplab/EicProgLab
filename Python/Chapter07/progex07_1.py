@@ -13,10 +13,12 @@ def main():
 class Ciao():
     
     def __init__(self, name, sleeptime):
+        """コンストラクタ"""
         self.__name = name
         self.__sleeptime = sleeptime
 
     def run(self):
+        """あいさつメソッド"""
         for i in range(10):
             time.sleep(self.__sleeptime)
             print(self.__name + ': Ciao!')
