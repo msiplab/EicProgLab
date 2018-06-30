@@ -1,12 +1,12 @@
 import time
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 
 def main():
-    # スレッド実行用オブジェクトのインスタンス化
+    # プロセス実行用オブジェクトのインスタンス化
     calro = Ciao('Calro',2.0)
     maria = Ciao('Maria',1.0)
-    with ThreadPoolExecutor(max_workers=2) as executor:
-        # スレッドスタート
+    with ProcessPoolExecutor(max_workers=2) as executor:
+        # プロセススタート
         executor.submit(calro.run)
         executor.submit(maria.run)
 
