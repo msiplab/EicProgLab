@@ -56,7 +56,7 @@ class Board:
         座標(x,y)に石を試しに置く。
         石を置こうとする場所が盤の範囲外であれば例外を投げる。
         """
-        # 例外を萎える可能性あり
+        # 例外を投げる可能性あり
         if self._getState(x,y) != Board._NONE:
             return False
         # 石を置こうとする場所の隣を返せるかどうかを確認
@@ -82,7 +82,7 @@ class Board:
         # マスの範囲外であれば例外を投げる
         if x < 1 or x > 8 or y < 1 or y > 8:
             raise BoardOutOfRangeException(
-                       'xとyは、0以上かつ9以下の値でなければなりません。')
+                       'xとyは、1以上かつ8未満の値でなければなりません。')
         # 盤のx列目，y行目の状態をリターン
         return self.__stateArray[x-1][y-1]
     
