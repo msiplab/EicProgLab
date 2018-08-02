@@ -75,7 +75,9 @@ class Board:
             self.__setState(x, y, self.__currentStone)
             # 手番を相手に渡す
             self.change()
-            
+        # 石を置けたら True, 置けなければ False を返す
+        return trial
+    
     def _getState(self, x, y):
         """指定した位置のマスの状態を取得"""
         
