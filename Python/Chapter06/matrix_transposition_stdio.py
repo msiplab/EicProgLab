@@ -6,7 +6,7 @@ def main():
     # 配列要素の入力  
     for irow in range(2):
         rowvector = input()
-        rowelements = re.split('\s*,?\s*', rowvector)
+        rowelements = re.split('\s*[ ,]\s*', rowvector)
         for icol in range(2):
             matrix[irow][icol] = float(rowelements[icol])
     # 配列要素の転置出力
