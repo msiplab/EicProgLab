@@ -4,7 +4,7 @@ from regular_octahedron import RegularOctahedron
 
 class ThreeDimensionalObjectFactory:
 
-    objlist = [ 
+    obj_list = [ 
                 Sphere(), 
                 RegularOctahedron()
                 ]
@@ -12,8 +12,8 @@ class ThreeDimensionalObjectFactory:
     @classmethod
     def get_menu(cls): 
         menu = ''
-        for idx in range(len(cls.objlist)):
-            menu += '{0}.\t {1}\n'.format(idx+1,cls.objlist[idx].name)        
+        for idx in range(len(cls.obj_list)):
+            menu += '{0}.\t {1}\n'.format(idx+1,cls.obj_list[idx].name)        
         return menu
         
         
