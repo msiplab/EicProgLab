@@ -3,7 +3,7 @@ from abc import ABCMeta, abstractmethod
 class IThreeDimensionalObject(metaclass=ABCMeta):  
     
     @abstractmethod
-    def isinside(self,x,y,z):
+    def is_inside(self,x,y,z):
         raise NotImplemented()
         
     @property
@@ -13,5 +13,5 @@ class IThreeDimensionalObject(metaclass=ABCMeta):
     
     @property
     @abstractmethod
-    def analyticalsolution(self):
+    def analytical_solution(self):
         raise NotImplemented()

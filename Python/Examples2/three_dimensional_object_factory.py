@@ -10,7 +10,7 @@ class ThreeDimensionalObjectFactory:
                 ]
             
     @classmethod
-    def getMenu(cls): 
+    def get_menu(cls): 
         menu = ''
         for idx in range(len(cls.objlist)):
             menu += '{0}.\t {1}\n'.format(idx+1,cls.objlist[idx].name)        

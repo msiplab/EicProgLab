@@ -3,7 +3,7 @@ import math
 
 class Sphere(IThreeDimensionalObject):
     
-    def isinside(self, x, y, z):
+    def is_inside(self, x, y, z):
         if (x**2 + y**2 + z**2) <= 1.0:
             return True
         else:
@@ -14,5 +14,5 @@ class Sphere(IThreeDimensionalObject):
         return '球'  
         
     @property    
-    def analyticalsolution(self):
+    def analytical_solution(self):
         return math.pi*4.0/3.0

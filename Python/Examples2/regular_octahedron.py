@@ -2,7 +2,7 @@ from i3d_object import IThreeDimensionalObject
 
 class RegularOctahedron(IThreeDimensionalObject):
 	
-    def isinside(self, x, y, z):
+    def is_inside(self, x, y, z):
         if (x + y + z) <= 1.0:
             return True
         else:
@@ -13,5 +13,5 @@ class RegularOctahedron(IThreeDimensionalObject):
         return '正八面体'  
     
     @property
-    def analyticalsolution(self):
+    def analytical_solution(self):
         return 4.0/3.0
