@@ -1,9 +1,10 @@
 from i3d_object import IThreeDimensionalObject
+import math
 
 class RegularOctahedron(IThreeDimensionalObject):
 	
     def is_inside(self, x, y, z):
-        if (x + y + z) <= 1.0:
+        if (math.fabs(x) + math.fabs(y) + math.fabs(z)) <= 1.0:
             return True
         else:
             return False

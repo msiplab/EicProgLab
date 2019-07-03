@@ -17,9 +17,9 @@ def main(args):
         # 処理の開始 
         nInside = 0
         for iSample in range(nSamples):
-            x = random()
-            y = random()
-            z = random()
+            x = 2.0*(random()-0.5) # [-1,1]
+            y = 2.0*(random()-0.5) # [-1,1]
+            z = 2.0*(random()-0.5) # [-1,1]
             if object3d.is_inside(x,y,z):
                 nInside += 1
         # 結果の表示
