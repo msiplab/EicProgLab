@@ -3,7 +3,7 @@
  *
  * プログラミング演習 例題1-2
  *
- * Copyright (C) 2010-2018, S. Muramatsu
+ * Copyright (C) 2010-20120, S. Muramatsu
  *
  */
 #include <stdio.h>
@@ -13,21 +13,21 @@
 #define absdif(x,y) ((x>y) ? (x-y) : (y-x)) /* 差分絶対値 */
 
 /* 平方根を求める関数 */
-double mysqrt(double a) {
+double mysqrt(double y) {
 
   	int k = 0; /* 反復回数 */
 	double x = 1.0; /* 平方根 */
-	double e = absdif(x,a/x); /* 誤差 */
+	double e = absdif(x,y/x); /* 誤差 */
 
 	/* 反復計算 */
 	printf(" %21.16g（反復回数 %d 回）\n", x, k);
 	while(e >= DELTA && k < 1000) {
 		k++;
-		x = ( x + a/x )/2.0; /* 値の更新 */
-		e = absdif( x, a/x ); /* 誤差 */
+		x = ( x + y/x )/2.0; /* 値の更新 */
+		e = absdif( x, y/x ); /* 誤差 */
 		printf(" %21.16g（反復回数 %d 回）\n", x, k);
 	}
-	x = ( x + a/x )/2.0; /* 値の更新 */
+	x = ( x + y/x )/2.0; /* 値の更新 */
 
 	return x;
 }
