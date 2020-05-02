@@ -1,3 +1,20 @@
+/* 補足説明    
+ * 
+ * GCC 8 では、符号付き整数の計算過程におけるオーバーフロー（wrapping)の誤りが
+ * 回避されています。
+ * 
+ * オーバーフローを再現するためには以下のようにコンパイルしてください。
+ * 
+ * $ gcc -fwrapv -fwrapv-pointer progbp02-3.c 
+ * 
+ * オーバーフローをコンパイル時にチェックするには以下のようにコンパイルしてください。
+ * 
+ * $ gcc -fsanitize=signed-integer-overflow progbp02-3.c
+ * 
+ * 【参考サイト】
+ *  
+ *  URL: https://gcc.gnu.org/gcc-8/changes.html
+ */
 #include <stdio.h>
 
 int main()
