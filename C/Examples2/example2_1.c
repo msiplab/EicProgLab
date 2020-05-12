@@ -1,76 +1,87 @@
-﻿/*
+/*
  * example2_1.c
  *
  * プログラミング演習 例題2-1
  *
- * Copyright (C) 2010-2017, S. Muramatsu
+ * Copyright (C) 2020, S. Muramatsu
  *
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-double getNorm(double* pVector, int nElements); /* 関数プロトタイプ */
+/* 関数プロトタイプ */
+void inputVec(double* pVec, int nDIms); 
+double getInnerProd(double* pVecX, double* pVecY, int nDims); 
 
 int main()
 {
-
   /* 変数宣言 */
-  int nElements; /* ベクトルの次元 */
-  double *pVector; /* ベクトルのポインタ */
-  int iElement;
+  int nDims; /* ベクトルの次元 */
+  double *pVecX, *pVecY; /* ベクトルのポインタ */
   char mode;
 
   /* ベクトルの次元の読み込み */
   do {
     printf("ベクトルの次元を入力して下さい．(>0): ");
-    scanf("%d", &nElements);
-  } while( nElements < 1 );
+    scanf("%d", &nDims);
+  } while( nDims < 1 );
 
   /* ベクトルのための動的領域確保 */
-  pVector = (double*)malloc(sizeof(double)*nElements);
+  pVecX = (double*)malloc(sizeof(double)*nDims);
+  pVecY = (double*)malloc(sizeof(double)*nDims);
 
   do {
-    /* ベクトルの要素の読み込み */
-    for(iElement=0; iElement<nElements; iElement++) {
-      printf("%d番目の要素を入力して下さい: ", iElement+1);
-      scanf("%lf", &pVector[iElement] );
-    }
-    printf("\n");
+    /* ベクトルxの要素の読み込み */
+    printf("ベクトルx の要素の読み込み\n");
+    inputVec(pVecX, nDims);
 
-    /* ベクトルの長さの計算 */
-    printf("ベクトルの長さ: %f\n\n", getNorm(pVector,nElements));
+    /* ベクトルyの要素の読み込み */
+    printf("ベクトルy の要素の読み込み\n");
+    inputVec(pVecY, nDims);
+
+    /* ベクトルの内積の計算と表示 */
+    printf("ベクトルxとyの内積: %f\n\n", getInnerProd(pVecX,pVecY,nDims));
 
     /* 継続の確認 */
     printf("継続しますか？['y'で継続]: ");
     scanf(" %c", &mode);
     printf("\n");
-
   } while ( mode=='y' || mode=='Y' );
 
   /* 領域解放 */
-  free(pVector);
+  free(pVecX);
+  free(pVecY);  
   
   return 0;
 }
 
-/* ベクトルの長さを計算する関数 */
-double getNorm(double* pVector, int nElements)
+/* ベクトルの要素を問い合わせる関数 */
+void inputVec(double* pVec, int nDims)
+{
+    int iDim;
+    for(iDim=0; iDim<nDims; iDim++) {
+      printf("%d番目の要素を入力して下さい: ", iDim+1);
+      scanf("%lf", &pVec[iDim] );
+    }
+    printf("\n");
+}
+
+/* ベクトルの内積を計算する関数 */
+double getInnerProd(double* pVecX, double* pVecY, int nDims)
 {
 
   static int nCalls = 0; /* 呼び出された回数（静的変数）*/
-  int iElement;
-  double sqrdsum;
+  int iDim;
+  double innerProd;
 
   /* 呼出し回数の更新と表示 */
   nCalls++;
-  printf("関数 getNorm の呼出し回数: %d\n", nCalls);
+  printf("関数 getInnerProd の呼出し回数: %d\n", nCalls);
 
   /* ベクトルの長さの計算 */
-  sqrdsum=0.0;
-  for(iElement=0; iElement<nElements; iElement++)
-    sqrdsum += pVector[iElement] * pVector[iElement];
+  innerProd=0.0;
+  for(iDim=0; iDim<nDims; iDim++)
+    innerProd += pVecX[iDim] * pVecY[iDim];
 
-  return sqrt(sqrdsum);
-
+  return innerProd;
 }
