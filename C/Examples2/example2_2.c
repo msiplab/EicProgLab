@@ -1,9 +1,9 @@
-﻿/*
+/*
  * example2_2.c
  *
  * プログラミング演習 例題2-2
  *
- * Copyright (C) 2008-2017, S. Muramatsu
+ * Copyright (C) 2008-2020, S. Muramatsu
  */
 #include <stdio.h>
 #include <stdlib.h>
