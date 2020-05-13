@@ -1,38 +1,21 @@
-% reportsample.tex
-
+% main.tex
 %
-
 % バージョン： 2017.4.7
-
 %
-
 % 説明：
-
 % プログラミング演習課題提出用PDFを生成する
-
 % サンプル TeX ファイル
-
 %
-
 % 作成者：村松正吾
-
 %
-
 % PDF作成手順：
-
 %
-
 % $ platex reportsample
-
 % $ dvipdfmx reportsample
-
 %
-
 % 更新履歴：
-
 % 2017.4.7　新規作成
 % 2020.4.21 更新
-
 %
 \documentclass[a4paper,12pt,uplatex]{jsarticle}
 
@@ -66,15 +49,12 @@
 }
 
 \def\lstlistingname{ソースコード}
-
 \newcommand{\mynumber}{在籍番号} % 学籍番号を記載
-
 \newcommand{\myname}{新潟 太郎} % 氏名を記載
-
 \newcommand{\myheader}{ % ここはそのままでよい。
+
 \begin{flushright}
 \mynumber\hspace{1zw} \myname\hspace{1zw} \today\end{flushright}}
-
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -85,26 +65,15 @@
 
 \subsection*{説明}
 
-
-
 ここに、課題（基礎）のソースコード、実行の様子の説明を記載。ソースコード~\ref{helloworld}を参照。
-
-
 
 \subsection*{考察}
 
-
-
 ここに、課題（基礎）のソースコードのプログラミング手法やコンピュータの動作などについて理解したこと、疑問に思ったこと、残された課題と改善策などを記載。
-
-
 
 \subsection*{ソースコード}
 
-
-
 \subsubsection*{helloworld.c}
-
 % ソースコード貼り付け参考サイト
 % https://www.overleaf.com/learn/latex/Code_listing
 \lstinputlisting[caption={helloworld.c},label={helloworld}]{helloworld.c}
@@ -112,16 +81,12 @@
 \subsection*{実行結果}
 
 \begin{quote}
-
 \begin{verbatim}
 
   >> こんにちは。世界！
 
 \end{verbatim}
-
 \end{quote}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -131,35 +96,20 @@
 
 \myheader
 
-
-
 \subsection*{説明}
-
-
 
 ここに、課題（基礎）のソースコード、実行の様子の説明を記載。
 図~\ref{graph}を参照。
 
-
-
 \subsection*{考察}
-
-
 
 ここに、課題（基礎）のソースコードのプログラミング手法やコンピュータの動作などについて理解したこと、疑問に思ったこと、残された課題と改善策などを記載。
 
-
-
 \subsection*{ソースコード}
 
-
-
 %\subsubsection*{helloworld.c}
-
 %\lstinputlisting[basicstyle=\ttfamily\footnotesize, frame=single]{helloworld.c} 
 % ソースファイルの読込
-
-
 
 \subsection*{実行結果}
 
@@ -171,18 +121,11 @@
 \caption{グラフの例}\label{graph}
 \end{figure}
 
-
 %\begin{quote}
-
 %\begin{verbatim}
 
-
-
 %\end{verbatim}
-
 %\end{quote}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -192,50 +135,27 @@
 
 \myheader
 
-
-
 \subsection*{説明}
-
-
 
 ここに、課題（基礎）のソースコード、実行の様子の説明を記載。
 
-
-
 \subsection*{考察}
 
-
-
 ここに、課題（基礎）のソースコードのプログラミング手法や
-
 コンピュータの動作などについて理解したこと、疑問に思ったこと、
-
 残された課題と改善策などを記載。
-
-
 
 \subsection*{ソースコード}
 
-
-
 %\subsubsection*{helloworld.c}
-
 %\lstinputlisting[basicstyle=\ttfamily\footnotesize, %frame=single]{helloworld.c}
-
-
 
 \subsection*{実行結果}
 
-
-
 %\begin{quote}
-
 %\begin{verbatim}
-
 %
-
 %\end{verbatim}
-
 %\end{quote}
 
 % 参考文献挿入参考サイト
