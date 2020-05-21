@@ -10,7 +10,7 @@ int main()
   int nElements = 2;
 
   display( vector, nElements);
-  printf("\t norm^2 = %f", 
+  printf("\t norm^2 = %f\n", 
           sqrdnorm( &vector[0] , nElements));
   return 0;
 }
