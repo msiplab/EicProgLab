@@ -13,7 +13,7 @@ int main()
   display( matrix , nRows);
   iRow = 0;
   iCol = 1;
-  printf("\t matrix(%d,%d) = %f", iRow, iCol,
+  printf("\t matrix(%d,%d) = %f\n", iRow, iCol,
 	 getElement(&matrix[0], iRow, iCol));
   return 0;
 }
