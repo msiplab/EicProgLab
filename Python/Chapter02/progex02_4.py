@@ -1,4 +1,4 @@
-"""push-down スタックの例"""
+﻿"""push-down スタックの例"""
 import sys
 
 STACK_SIZE = 100 # スタックサイズ 
