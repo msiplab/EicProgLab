@@ -1,4 +1,4 @@
-class PointState:
+class CellState:
     """マス目の状態クラス"""
     
     def __init__(self, mark):

@@ -1,6 +1,6 @@
 class Cat:
     
-    def __init__(self, name, favorite, weight):
+    def __init__(self, name, favorite, weight=5):
         self.__name = name
         self.__favorite = favorite
         self.__weight = weight

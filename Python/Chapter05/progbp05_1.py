@@ -1,8 +1,8 @@
 from cat import Cat
 
 def main():
-    tama = Cat('タマ', 'マグロ', 10)
-    mike = Cat('ミケ', 'サンマ', 5)
+    tama = Cat(name='タマ', weight=10, favorite='マグロ')
+    mike = Cat(name='ミケ', favorite='サンマ')
     
     print(tama.name + 'の体重：' + str(tama.weight) + 'kg')
     print(mike.name + 'の体重：' + str(mike.weight) + 'kg')
