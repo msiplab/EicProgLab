@@ -23,6 +23,7 @@ def main():
         display_current_score(board)
         # 現在の手番の石の表示
         display_current_stone(board)
+        print()
         
         # 盤(board)の5列3行目に手番の石(White)を置いてみる
         print('(x,y) = (5,3)')
@@ -33,6 +34,7 @@ def main():
         display_current_score(board)
         # 現在の手番の石の表示
         display_current_stone(board)
+        print()
         
         # パスする
         print('パス')
@@ -43,6 +45,7 @@ def main():
         display_current_score(board)
         # 現在の手番の石の表示
         display_current_stone(board)
+        print()
         
         # コマンド入力待ち
         input('\n終了します [Enter]')
