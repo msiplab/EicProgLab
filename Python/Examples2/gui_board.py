@@ -82,11 +82,11 @@ class BoardTable(Frame):
         # 配列の行数(nrows)と列数(ncols)        
         nrows = BoardTable.NUM_DIMS[0]
         ncols = BoardTable.NUM_DIMS[1]
-        # マス目ラベルの生成
+        # マス目ボタンの生成
         self.__cells = [ [ Button(self, image=self.empty_img, style='MyCell.TButton')
                             for icol in range(ncols) ] 
                             for irow in range(nrows) ]
-        # マス目ラベルのグリッド配置
+        # マス目ボタンのグリッド配置
         for irow in range(nrows):
             for icol in range(ncols):
                 cell = self.__cells[irow][icol]
