@@ -11,11 +11,11 @@ class GuiBoard(Board):
         # Board クラスのコンストラクタを呼び出し
         super().__init__(verbose) 
         if master == None:
-            self.__root = Tk()
+            self.master = Tk()
+            self.master.title('リバーシ')
         else:
-            self.__root = master
-        self.__root.title('リバーシ')
-        self.__table = BoardTable(self.__root)
+            self.master = master
+        self.__table = BoardTable(master) # self)
         self.display_state()
     
     def display_state(self):
@@ -36,17 +36,19 @@ class GuiBoard(Board):
             print(boore)            
         finally:
             # 表示の更新
-            self.__root.update()
+            self.master.update()
             super().display_state()
             time.sleep(1)
 
 class BoardTable(Frame):
     """ボード用のテーブル"""
 
-    def __init__(self,master=None,ndims=[8,8]):
+    NUM_DIMS = [8,8]
+
+    def __init__(self,master): # ,board):
         """コンストラクタ"""
-        super().__init__(master)
-        self.ndims = ndims
+        super().__init__(master) # board.master)
+        #self.__board = board
         self['padding']=(20,20)
         self.pack()
         self.create_style()
@@ -55,19 +57,19 @@ class BoardTable(Frame):
         
     def create_style(self):
         """スタイルの生成"""
-        # ラベルのスタイル
+        # ボタンのスタイル
         style = Style()
-        style.configure('My.TButton',
+        style.configure('MyCell.TButton',
             borderwidth = 0,
             padding = (0,0),
             relief = RIDGE,
             background='green')
         # ラベルのスタイル            
-        style.configure('My.TLabel',
-            font = ('Helvetica', '12'),
-            anchor = 'center',
-            background='green',
-            foreground='white')            
+        #style.configure('MyInfo.TLabel',
+            #font = ('Helvetica', '12'),
+            #anchor = 'center',
+            #background='green',
+            #foreground='white') 
 
     def create_images(self):
         """マス目の画像生成"""
@@ -78,10 +80,10 @@ class BoardTable(Frame):
     def create_widgets(self):
         """ウィジットの生成"""
         # 配列の行数(nrows)と列数(ncols)        
-        nrows = self.ndims[0]
-        ncols = self.ndims[1]
+        nrows = BoardTable.NUM_DIMS[0]
+        ncols = BoardTable.NUM_DIMS[1]
         # マス目ラベルの生成
-        self.__cells = [ [ Button(self, image=self.empty_img, style='My.TButton')
+        self.__cells = [ [ Button(self, image=self.empty_img, style='MyCell.TButton')
                             for icol in range(ncols) ] 
                             for irow in range(nrows) ]
         # マス目ラベルのグリッド配置
@@ -92,18 +94,21 @@ class BoardTable(Frame):
                 cell.image = self.empty_img
                 # 左クリック時の動作の登録
                 cell.bind('<Button-1>', self.press)                
-        # ラベルの生成
-        self.__var = StringVar()
-        label = Label(self, style='My.TLabel')
-        label.config(textvariable = self.__var)
-        self.__var.set('(-,-)')
-        label.grid(row=nrows+1, column=0, columnspan=ncols, sticky=(W,E))                
+        # 情報ラベルの生成
+        #self.__var = StringVar()
+        #label = Label(self, style='MyInfo.TLabel')
+        #label.config(textvariable = self.__var)
+        #self.__var.set('(-,-)')
+        #label.grid(row=nrows+1, column=0, columnspan=ncols, sticky=(W,E))                
 
     def press(self,event):
         """ボタンクリックの動作"""
-        irow = event.widget.grid_info()['row']
-        icol = event.widget.grid_info()['column']        
-        self.__var.set('({0},{1})'.format(irow,icol))
+        x = event.widget.grid_info()['column'] + 1              
+        y = event.widget.grid_info()['row'] + 1
+        print('({0},{1})'.format(x,y))
+        #self.__board.try_place_stone(x, y)
+        #self.__board.display_state()
+        #self.__var.set('({0},{1})'.format(x,y))
 
     def set_cell_stone(self, x, y, stone):
         """コマの色の更新"""
@@ -116,5 +121,6 @@ class BoardTable(Frame):
 
 if __name__ == '__main__':
     root = Tk()
-    board = GuiBoard(root)
+    root.title('リバーシ')    
+    board = GuiBoard(root,verbose=True)
     root.mainloop()
