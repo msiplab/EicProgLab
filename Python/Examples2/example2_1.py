@@ -6,13 +6,12 @@ example2_1
 Copyright (c) 2018-2020 Shogo MURAMATSU, All rights reserved
 """
 from board import Board
-#from gui_board import GuiBoard
 from board_out_of_range_exception import BoardOutOfRangeException
 
 def main():
     try:
         # Board型のインスタンスboardを生成
-        board = Board() # GuiBoard()
+        board = Board() 
         # 盤(board)の状態を表示（初期状態）
         board.display_state()
         # 盤(board)の3列4行目に手番の石(Black)を置いてみる
@@ -45,7 +44,8 @@ def main():
         # 現在の手番の石の表示
         display_current_stone(board)
         
-        print()
+        # コマンド入力待ち
+        input('\n終了します [Enter]')
         
     except BoardOutOfRangeException as boore:
         print()
