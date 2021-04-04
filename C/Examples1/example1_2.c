@@ -3,7 +3,7 @@
  *
  * プログラミング演習 例題1-2
  *
- * Copyright (C) 2010-20120, S. Muramatsu
+ * Copyright (C) 2010-2021, S. Muramatsu
  *
  */
 #include <stdio.h>
