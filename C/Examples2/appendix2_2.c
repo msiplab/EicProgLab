@@ -5,7 +5,7 @@
  *
  * 解析解による計算
  * 
- * Copyright (C) 2008-2017, S. Muramatsu
+ * Copyright (C) 2008-2021, S. Muramatsu
  *
  */
 
