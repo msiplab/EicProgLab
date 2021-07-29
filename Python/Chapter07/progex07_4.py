@@ -19,5 +19,5 @@ class Fibonacchi:
         return c
 
 if __name__ == '__main__':
-    for n in Fibonacci(10):
+    for n in Fibonacchi(10):
         print(n, end=' ')
