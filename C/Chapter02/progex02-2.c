@@ -2,12 +2,9 @@
 
 int main()
 {
-  int c;
-  /* Ctrl-d で終了 */
-  while ((c = getchar()) != EOF)
-    if ('a' <= c && c <= 'z')
-      putchar(c - 'a' + 'A');
-    else
-      putchar(c);
+  char c = 9; /* 水平タブ */
+  printf("%c a %c b \n", c, c+1);
+  printf("%d a %d b \n", c, c+1);
+  
   return 0;
 }
