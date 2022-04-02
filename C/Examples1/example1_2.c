@@ -15,7 +15,7 @@
 /* 平方根を求める関数 */
 double mysqrt(double y) {
 
-  	int k = 0; /* 反復回数 */
+	int k = 0; /* 反復回数 */
 	double x = 1.0; /* 平方根 */
 	double e = absdif(x,y/x); /* 誤差 */
 
