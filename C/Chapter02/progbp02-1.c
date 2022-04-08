@@ -5,11 +5,11 @@
  * 
  * オーバーフローを再現するためには以下のようにコンパイルしてください。
  * 
- * $ gcc -fwrapv -fwrapv-pointer progbp02-3.c 
+ * $ gcc -fwrapv -fwrapv-pointer progbp02-1.c 
  * 
  * オーバーフローをコンパイル時にチェックするには以下のようにコンパイルしてください。
  * 
- * $ gcc -fsanitize=signed-integer-overflow progbp02-3.c
+ * $ gcc -fsanitize=signed-integer-overflow progbp02-1.c
  * 
  * 【参考サイト】
  *  
