@@ -2,9 +2,9 @@
 
 int main()
 {
-  char c = 9; /* 水平タブ */
-  printf("%c a %c b \n", c, c+1);
-  printf("%d a %d b \n", c, c+1);
+  char c = 'a'; /
+  printf("%c %c %c \n", c, c+1, c+2);
+  printf("%d %d %d \n", c, c+1, c+2);
   
   return 0;
 }

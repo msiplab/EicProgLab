@@ -5,7 +5,7 @@
  * 
  * オーバーフローを再現するためには以下のようにコンパイルしてください。
  * 
- * $ gcc -fwrapv -fwrapv-pointer progbp02-3.c 
+ * $ gcc -fwrapv -fwrapv-pointer progbp02-1.c 
  * 
  * オーバーフローをコンパイル時にチェックするには以下のようにコンパイルしてください。
  * 
