@@ -9,7 +9,7 @@
  * 
  * オーバーフローをコンパイル時にチェックするには以下のようにコンパイルしてください。
  * 
- * $ gcc -fsanitize=signed-integer-overflow progbp02-3.c
+ * $ gcc -fsanitize=signed-integer-overflow progbp02-1.c
  * 
  * 【参考サイト】
  *  
