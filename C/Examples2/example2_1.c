@@ -78,7 +78,7 @@ double getInnerProd(double* pVecX, double* pVecY, int nDims)
   nCalls++;
   printf("関数 getInnerProd の呼出し回数: %d\n", nCalls);
 
-  /* ベクトルの長さの計算 */
+  /* ベクトルの内積の計算 */
   innerProd=0.0;
   for(iDim=0; iDim<nDims; iDim++)
     innerProd += pVecX[iDim] * pVecY[iDim];
