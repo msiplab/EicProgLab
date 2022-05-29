@@ -44,7 +44,7 @@ int main()
 
     /* 継続の確認 */
     printf("継続しますか？['y'で継続]: ");
-    scanf(" %c", &mode);
+    scanf(" %c", &mode); /* %cの前にスペースを入れる */
     printf("\n");
   } while ( mode=='y' || mode=='Y' );
 
