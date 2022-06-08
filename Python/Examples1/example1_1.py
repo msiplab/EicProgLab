@@ -1,6 +1,6 @@
 """
 example1_1.py
-(c) Copyright 2018-202, Shogo MURAMATSU, All rights reserved
+(c) Copyright 2018-2022, Shogo MURAMATSU, All rights reserved
 """
 import sys
 
