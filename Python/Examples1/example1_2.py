@@ -1,6 +1,6 @@
 """
 example1_2.py
-Copyright (c) 2018-2020, Shogo MURAMATSU, All rights reserved
+Copyright (c) 2018-2022, Shogo MURAMATSU, All rights reserved
 """
 from my_complex import MyComplex
 import sys
