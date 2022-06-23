@@ -21,7 +21,7 @@ def main(args):
         v0 = (r[2]*r[3]-r[1]*r[4])*r[0]*SRC_VOLTAGE / \
             ( r[1]*r[3]*(r[2]+r[4]) + \
               r[2]*r[4]*(r[1]+r[3]) + \
-              r[0]*(r[1]+r[3])*(r[2]*r[4]) )            
+              r[0]*(r[1]+r[3])*(r[2]+r[4]) )            
         # 電圧Vの表示
         print('電源電圧 E = ' + str(SRC_VOLTAGE) + ' V')
         for idx in range(NUM_REGS):
