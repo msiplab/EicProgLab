@@ -28,7 +28,7 @@ def main(args):
     print('内容：', args)
     # 指定の値の要素を削除(remove)
     args.remove('insert')
-    print('-- insert --')
+    print('-- remove --')
     print('内容：', args)
     # リストの連結
     print('-- newlist --')
