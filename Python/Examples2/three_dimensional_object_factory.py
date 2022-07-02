@@ -1,12 +1,14 @@
 from volume_calculator_exception import VolumeCalculatorException
 from sphere import Sphere
-from regular_octahedron import RegularOctahedron
+from cylinder import Cylinder
+from cone import Cone
 
 class ThreeDimensionalObjectFactory:
 
     obj_list = [ 
                 Sphere(), 
-                RegularOctahedron()
+                Cylinder(),
+                Cone()
                 ]
             
     @classmethod
@@ -21,8 +23,10 @@ class ThreeDimensionalObjectFactory:
     def create(cls,name):
         if name == '1' or name == Sphere().name:
             return Sphere()
-        elif name == '2' or name == RegularOctahedron().name:
-            return RegularOctahedron()
+        elif name == '2' or name == Cylinder().name:
+            return Cylinder()
+        elif name == '3' or name == Cone().name:
+            return Cone()            
         else:
             raise VolumeCalculatorException(name  + ' は無効です．')
         

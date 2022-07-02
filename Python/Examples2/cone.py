@@ -1,18 +1,18 @@
 from i3d_object import IThreeDimensionalObject
 import math
 
-class RegularOctahedron(IThreeDimensionalObject):
+class Cone(IThreeDimensionalObject):
 	
     def is_inside(self, x, y, z):
-        if (math.fabs(x) + math.fabs(y) + math.fabs(z)) <= 1.0:
+        if (x**2 + y**2) <= (1.0-z)**2 and z >= 0.0:
             return True
         else:
             return False
             
     @property
     def name(self):
-        return '正八面体'  
+        return '円錐'  
     
     @property
     def analytical_solution(self):
-        return 4.0/3.0
+        return math.pi/3.0
