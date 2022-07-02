@@ -64,6 +64,21 @@ class Board:
         except BoardOutOfRangeException as boore:
             print(boore)
 
+    def display_current_score(self):
+        """現在のスコアの表示"""
+        nw = self._count_cell_states(Board.WHITE)
+        nb = self._count_cell_states(Board.BLACK)
+        ne = self._count_cell_states(Board.EMPTY)
+        print('現在のスコア： 白 {0}, 黒 {1}, 空 {2}'.format(nw,nb,ne))
+
+    def display_current_stone(self):
+        """現在の手番の石の表示"""
+        print('現在の手番：',end='')
+        if self.__current_stone == Board.BLACK:
+            print('黒(B)')
+        else:
+            print('白(W)')               
+
     def change(self):
         """パス"""
         self.__current_stone = self.__get_enemy_stone()

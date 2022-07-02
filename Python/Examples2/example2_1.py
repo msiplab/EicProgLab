@@ -20,9 +20,9 @@ def main():
         # 盤(board)の状態を表示
         board.display_state()
         # 現在のスコアの表示
-        display_current_score(board)
+        board.display_current_score()
         # 現在の手番の石の表示
-        display_current_stone(board)
+        board.display_current_stone()
         print()
         
         # 盤(board)の5列3行目に手番の石(White)を置いてみる
@@ -31,9 +31,9 @@ def main():
         # 盤(board)の状態を表示
         board.display_state()
         # 現在のスコアの表示
-        display_current_score(board)
+        board.display_current_score()
         # 現在の手番の石の表示
-        display_current_stone(board)
+        board.display_current_stone()
         print()
         
         # パスする
@@ -42,9 +42,9 @@ def main():
         # 盤(board)の状態を表示
         board.display_state()
         # 現在のスコアの表示
-        display_current_score(board)
+        board.display_current_score()
         # 現在の手番の石の表示
-        display_current_stone(board)
+        board.display_current_stone()
         print()
         
         # コマンド入力待ち
@@ -52,22 +52,7 @@ def main():
         
     except BoardOutOfRangeException as boore:
         print()
-        print(boore)
-        
-def display_current_score(board: Board):
-    """現在のスコアの表示"""
-    nw = board.number_of_white_cells
-    nb = board.number_of_black_cells
-    ne = board.number_of_empty_cells
-    print('現在のスコア： 白 {0}, 黒 {1}, 空 {2}'.format(nw,nb,ne))
-
-def display_current_stone(board: Board):
-    """現在の手番の石の表示"""
-    print('現在の手番：',end='')
-    if board.current_stone == Board.BLACK:
-        print('黒(B)')
-    else:
-        print('白(W)')     
+        print(boore)  
     
 if __name__ == '__main__':
     main()
