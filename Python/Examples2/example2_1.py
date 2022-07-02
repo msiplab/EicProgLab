@@ -3,7 +3,7 @@ example2_1
 
 例題2-1（基礎）
 
-Copyright (c) 2018-2021 Shogo MURAMATSU, All rights reserved
+Copyright (c) 2018-2022 Shogo MURAMATSU, All rights reserved
 """
 from board import Board
 from board_out_of_range_exception import BoardOutOfRangeException
