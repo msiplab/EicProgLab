@@ -26,6 +26,7 @@ def main(args):
         res = (4.0*nInside)/nSamples
         print('π 〜 {0} (N={1})'.format(res,nSamples))
         # 散布図
+        plt.axes().set_aspect('equal')
         plt.scatter(xin,yin,c='blue',marker='o',label='inside')
         plt.scatter(xout,yout,c='red',marker='x',label='outside')
         plt.xlim(0.0,1.0)
@@ -34,7 +35,6 @@ def main(args):
         plt.ylabel('y')
         plt.title('$\pi \simeq$ {0} (N={1})'.format(res,nSamples))
         plt.legend(loc='lower left')
-        plt.axes().set_aspect('equal')
         plt.show()
     except IndexError as ie:
         print('引数の数が足りません', file=sys.stderr)
