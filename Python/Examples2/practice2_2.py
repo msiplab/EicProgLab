@@ -1,3 +1,11 @@
+"""
+practice2_2
+
+課題2-2（発展）
+
+Copyright (c) 2023 Shogo MURAMATSU, All rights reserved
+"""
+
 import sys
 import time
 from volume_estimator import VolumeEstimator
