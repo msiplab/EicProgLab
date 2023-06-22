@@ -1,7 +1,10 @@
 import sys
+import time
+from volume_estimator import VolumeEstimator
 from three_dimensional_object_factory import ThreeDimensionalObjectFactory
 from volume_calculator_exception import VolumeCalculatorException
-from random import random
+from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import as_completed
 
 def main(args):
     while True:
@@ -13,20 +16,35 @@ def main(args):
             # 物体名に対応した包含評価のインスタンス生成
             # 多態性（ポリモーフィズム）の利用
             object3d = ThreeDimensionalObjectFactory.create(name)
+            # プロセス数の入力
+            nProcess = int(input('プロセス数を入力して下さい: '))
             # 標本点数の入力
-            nSamples = int(input('標本点数を入力して下さい: '))
-            # 処理の開始 
-            nInside = 0
-            for iSample in range(nSamples):
-                x = 2.0*(random()-0.5) # [-1,1]
-                y = 2.0*(random()-0.5) # [-1,1]
-                z = 2.0*(random()-0.5) # [-1,1]
-                if object3d.is_inside(x,y,z):
-                    nInside += 1
+            nSamples = int(input('プロセス毎の標本点数を入力して下さい: '))
+            # 総サンプル数の表示
+            print('総サンプル数：{0}'.format(nProcess*nSamples))
+            # 開始時刻
+            start_time = time.time()
+            # サブプロセス実行用オブジェクトのインスタンス化
+            volest = [ VolumeEstimator(object3d,nSamples) for id in range(nProcess)]
+            volacc = 0.0
+            with ProcessPoolExecutor() as executor:
+                # サブプロセスのスタートとIDの割り当て
+                future_volest = { executor.submit(volest[id].run):
+                                 id for id in range(nProcess)}
+                # サブプロセスの結果の回収
+                for future in as_completed(future_volest):
+                    id = future_volest[future]
+                    volres = future.result()
+                    print('{0:02d}:{1:6.4f}'.format(id,volres))
+                    volacc += volres
+            # 推定の平均値
+            volave = volacc/nProcess
+            # 処理時間
+            elapsed_time = time.time() - start_time
+            print('処理時間： {0:6.4f} [s]'.format(elapsed_time))
             # 結果の表示
-            vol = 8.0*nInside/nSamples
             print()
-            print('{0} の体積 〜 {1}'.format(object3d.name, vol))
+            print('{0} の体積 〜 {1}'.format(object3d.name, volave))
             print('(解析解) {0}'.format(object3d.analytical_solution))
         except ValueError as ve:
             print(ve)
