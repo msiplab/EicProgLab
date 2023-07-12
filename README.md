@@ -37,5 +37,10 @@ Raspberry Pi Zero W のセットアップや機能については以下の Wiki 
 
 - https://github.com/msiplab/EicProgLab/wiki
 
+## リンク
+
+- [電子情報通信設計製図](https://github.com/msiplab/EicDesignLab)
+- [電子情報通信実験Ⅳ](https://github.com/msiplab/EicEngLabIV)
+
 ***
 新潟大学工学部工学科　電子情報通信プログラム　村松正吾，崔森悦
