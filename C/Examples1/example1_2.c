@@ -3,7 +3,7 @@
  *
  * プログラミングBI 演習例題1-2
  *
- * Copyright (C) 2010-2023, S. Muramatsu
+ * Copyright (C) 2010-2024, S. Muramatsu
  *
  */
 #include <stdio.h>
