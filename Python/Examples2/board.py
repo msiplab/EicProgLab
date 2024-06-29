@@ -16,15 +16,22 @@ class Board:
         # 盤上の石をすべてクリア(EMPTY)と設定
         self.__state_array = [ [ Board.EMPTY
                                 for irow in range(1,9) ]
-                                for icol in range(1,9) ]        
+                                for icol in range(1,9) ]     
+        # 盤の状態表示のコマンド出力の設定
+        self.verbose = verbose 
+
+    # 盤の状態を開始状態にリセット
+    def reset_state(self):   
+        # 盤上の石をすべてクリア(EMPTY)と設定
+        self.__state_array = [ [ Board.EMPTY
+                                for irow in range(1,9) ]
+                                for icol in range(1,9) ]     
         # 盤を初期状態にするために石を置く
         self.__set_cell_state(4, 4, Board.WHITE)
         self.__set_cell_state(5, 4, Board.BLACK)
         self.__set_cell_state(4, 5, Board.BLACK)
         self.__set_cell_state(5, 5, Board.WHITE)
-        # 盤の状態表示のコマンド出力の設定
-        self.verbose = verbose 
-
+    
     @property
     def current_stone(self):
         """手番の石"""

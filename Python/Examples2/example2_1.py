@@ -14,6 +14,10 @@ def main():
         board = Board() 
         # 盤(board)の状態を表示（初期状態）
         board.display_state()
+        # 盤(board)を開始状態にリセット
+        board.reset_state()
+        # 盤(board)の状態を表示（開始状態）
+        board.display_state()
         # 盤(board)の3列4行目に手番の石(Black)を置いてみる
         print('(x,y) = (3,4)')
         board.try_place_stone(3,4)
