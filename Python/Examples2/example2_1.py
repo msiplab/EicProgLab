@@ -28,7 +28,6 @@ def main():
         # 現在の手番の石の表示
         board.display_current_stone()
         print()
-        
         # 盤(board)の5列3行目に手番の石(White)を置いてみる
         print('(x,y) = (5,3)')
         board.try_place_stone(5,3)
@@ -39,7 +38,6 @@ def main():
         # 現在の手番の石の表示
         board.display_current_stone()
         print()
-        
         # パスする
         print('パス')
         board.change()
@@ -50,7 +48,6 @@ def main():
         # 現在の手番の石の表示
         board.display_current_stone()
         print()
-        
         # コマンド入力待ち
         input('\n終了します [Enter]')
         
