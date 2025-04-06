@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Iunity -Wall
+CFLAGS = -Iunity -Wall -DUNITY_INCLUDE_DOUBLE
 UNITY_SRC = unity/unity.c
 TEST_DIR = test
 BIN_DIR = bin
