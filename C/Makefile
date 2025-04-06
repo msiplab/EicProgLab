@@ -5,7 +5,7 @@ TEST_DIR = test
 BIN_DIR = bin
 
 # ソースを探すディレクトリ一覧（必要に応じて拡張可）
-SRC_DIRS = Examples1 Examples2
+SRC_DIRS = Examples1 Examples2 Exercises
 
 # テスト名一覧（example1_1, example2_1 など）
 TEST_NAMES = $(patsubst test_%,%,$(basename $(notdir $(wildcard $(TEST_DIR)/test_*.c))))
