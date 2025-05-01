@@ -66,6 +66,7 @@ void rccirc(FILE *pfin, FILE *pfout)
   /* パラメータの確認（標準出力） */
   fprintf(stdout, "E = %g [V], R = %g [Ohm], C = %g [F]\n", e, r, c);
   fprintf(stdout, "t = %g [s], te = %g [s], v = %g [V], h = %g\n", t, te, v, h);
+  
   /* 計算の実行とファイル出力 */
   tau = r * c;   /* 時定数の設定 */
   s.x = t / tau;   /* x の初期値設定 */
