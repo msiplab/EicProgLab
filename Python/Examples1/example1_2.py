@@ -22,27 +22,26 @@ def main(args):
     print(' z1 \t= ' + str(z1))
     
     # 符号反転の結果を表示
-    z2 = z0.negative()
+    z2 = z0.neg()
     print('-z0 \t= ' + str(z2))
-    z2 = z1.negative()
+    z2 = z1.neg()
     print('-z1 \t= ' + str(z2))
     
     #絶対値の結果を表示
-    print('|z0| \t= ' + str(z0.absolute()))
-    print('|z1| \t= ' + str(z1.absolute()))
+    print('|z0| \t= ' + str(z0.abs()))
+    print('|z1| \t= ' + str(z1.abs()))
     
     #２つの複素数の加算
-    z2 = z0.plus(z1)
+    z2 = z0.__add__(z1) # z2 = z0 + z1 でも OK
     print('z0+z1 \t= ' + str(z2))
     
     #２つの複素数の減算
-    z2 = z0.minus(z1)
+    z2 = z0.__sub__(z1) # z2 = z0 - z1 でも OK
     print('z0-z1 \t= ' + str(z2))
     
     #２つの複素数の積
-    z2 = z0.multipliedby(z1)
+    z2 = z0.__mul__(z1) # z2 = z0 * z1 でも OK
     print('z0*z1 \t= ' + str(z2))
     
-
 if __name__ == '__main__':
     main(sys.argv)
