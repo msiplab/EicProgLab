@@ -21,7 +21,7 @@ def main(args):
     print(' z0 \t= ' + str(z0))
     print(' z1 \t= ' + str(z1))
     
-    # 符号反転の結果を表示
+    #符号反転の結果を表示
     z2 = z0.neg()
     print('-z0 \t= ' + str(z2))
     z2 = z1.neg()
