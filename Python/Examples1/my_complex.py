@@ -7,37 +7,37 @@ import math
 class MyComplex:
     
     def __init__(self, real, imag):
-        """コンストラクタ"""
+        """ コンストラクタ """
         self.__real = real
         self.__imag = imag
     
     def __str__(self):
-        """複素数の文字列化"""
+        """ 複素数の文字列化 """
         sgn = ' - j' if self.__imag < 0 else ' + j'
         sreal = str(float(self.__real)) 
         simag = sgn + str(math.fabs(self.__imag))
         return sreal + simag
         
     def neg(self):
-        """複素数の符号反転演算"""
+        """ 複素数の符号反転演算 """
         return MyComplex(-self.__real, -self.__imag)
         
     def abs(self):
-        """複素数の絶対値"""
+        """ 複素数の絶対値 """
         return math.sqrt(self.__real**2 + self.__imag**2)
         
     def __add__(self, another):
-        """複素数の加算"""
+        """ 複素数の加算 """
         resreal = self.__real + another.__real
         resimag = self.__imag + another.__imag
         return MyComplex(resreal, resimag)
         
     def __sub__(self, another):
-        """複素数の減算"""
+        """ 複素数の減算 """
         return self.__add__(another.neg())
         
     def __mul__(self, another):
-        """複素数の積"""
+        """ 複素数の積 """
         resreal = self.__real*another.__real \
                    - self.__imag*another.__imag
         resimag = self.__real*another.__imag \
