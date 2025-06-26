@@ -3,7 +3,7 @@ practice2_2
 
 課題2-2（発展）
 
-Copyright (c) 2024 Shogo MURAMATSU, All rights reserved
+Copyright (c) 2024-2025 Shogo MURAMATSU, All rights reserved
 """
 
 import sys
