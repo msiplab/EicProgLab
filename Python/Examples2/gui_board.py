@@ -5,14 +5,22 @@ from board_out_of_range_exception import BoardOutOfRangeException
 import time
 
 class GuiBoard(Board):
-
+    """
+    GUIでリバーシのボードを表示するクラス   
+    
+    # 日本語フォントのインストール
+    
+    > sudo apt update
+    > sudo apt install -y fonts-noto-cjk
+    
+    """
     def __init__(self,master=None,verbose=False):
         """コンストラクタ"""        
         # Board クラスのコンストラクタを呼び出し
         super().__init__(verbose) 
         if master == None:
             self.master = Tk()
-            self.master.title('リバーシ')
+            self.master.title("リバーシ")
         else:
             self.master = master
         self.__table = BoardTable(master) # self)
