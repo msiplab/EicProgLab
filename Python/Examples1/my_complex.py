@@ -1,6 +1,6 @@
 """
 my_complex.py
-Copyright (c) 2018-2025, Shogo MURAMATSU, All rights reserved
+Copyright (c) 2018-2026, Shogo MURAMATSU, All rights reserved
 """
 import math
 
