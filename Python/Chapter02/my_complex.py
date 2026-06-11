@@ -10,8 +10,8 @@ class MyComplex:
 
     '''
     def __init__(self, real, imag):
-        """コンストラクタ"""
-        # フィールドの初期化（クラス直下同名フィールドをコメントアウト）
+        """コンストラクタ"""（前のコンストラクタをコメントアウト）
+        # フィールドの初期化
         self.real, self.imag = real, imag
     '''
     
