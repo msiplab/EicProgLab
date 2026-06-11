@@ -3,9 +3,11 @@ import math
 class MyComplex:
     """複素数クラス"""
     # フィールド（初期値）
-    real = 0.0
-    imag = 0.0
-    
+
+    def __init__(self):
+        self.real = 0.0
+        self.imag = 0.0
+
     '''
     def __init__(self, real, imag):
         """コンストラクタ"""
