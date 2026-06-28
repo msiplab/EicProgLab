@@ -18,7 +18,7 @@ class GuiBoard(Board):
         """コンストラクタ"""        
         # Board クラスのコンストラクタを呼び出し
         super().__init__(verbose) 
-        if master == None:
+        if master is None:
             self.master = Tk()
             self.master.title("リバーシ")
         else:
@@ -46,7 +46,7 @@ class GuiBoard(Board):
             # 表示の更新
             self.master.update()
             super().display_state()
-            time.sleep(1)
+            time.sleep(0.3)
 
 class BoardTable(Frame):
     """ボード用のテーブル"""
@@ -113,7 +113,7 @@ class BoardTable(Frame):
         """ボタンクリックの動作"""
         x = event.widget.grid_info()['column'] + 1              
         y = event.widget.grid_info()['row'] + 1
-        print('({0},{1})'.format(x,y))
+        print('{0} {1}'.format(x,y))
         #self.__board.try_place_stone(x, y)
         #self.__board.display_state()
         #self.__var.set('({0},{1})'.format(x,y))
