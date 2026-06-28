@@ -95,25 +95,29 @@ class Board:
         座標(x,y)に石を試しに置く。
         石を置こうとする場所が盤の範囲外であれば例外を投げる。
         """
+
         # 例外を投げる可能性あり
         if self._get_cell_state(x,y) != Board.EMPTY:
             return False
+
         # 石を置こうとする場所の隣を返せるかどうかを確認
         trial = False
-        trial = trial | self.__try_reverse_next(x, y, +1,  0) # 右
-        trial = trial | self.__try_reverse_next(x, y,  0, +1) # 下
-        trial = trial | self.__try_reverse_next(x, y, -1,  0) # 左
-        trial = trial | self.__try_reverse_next(x, y,  0, -1) # 上
-        trial = trial | self.__try_reverse_next(x, y, +1, +1) # 右下
-        trial = trial | self.__try_reverse_next(x, y, +1, -1) # 右上
-        trial = trial | self.__try_reverse_next(x, y, -1, +1) # 左下
-        trial = trial | self.__try_reverse_next(x, y, -1, -1) # 左上
+        trial = trial | self.__try_reverse_next(x, y, +1,  0)  # 右
+        trial = trial | self.__try_reverse_next(x, y,  0, +1)  # 下
+        trial = trial | self.__try_reverse_next(x, y, -1,  0)  # 左
+        trial = trial | self.__try_reverse_next(x, y,  0, -1)  # 上
+        trial = trial | self.__try_reverse_next(x, y, +1, +1)  # 右下
+        trial = trial | self.__try_reverse_next(x, y, +1, -1)  # 右上
+        trial = trial | self.__try_reverse_next(x, y, -1, +1)  # 左下
+        trial = trial | self.__try_reverse_next(x, y, -1, -1)  # 左上
+
         # 隣の石を返すことができる場合
-        if trial: 
+        if trial:
             # 石を置いてボードの状態を更新する
             self.__set_cell_state(x, y, self.__current_stone)
             # 手番を相手に渡す
             self.change()
+
         # 石を置けたら True, 置けなければ False を返す
         return trial
     
